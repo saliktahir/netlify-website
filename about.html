@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us — Salik Tahir</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0F1417; --bg-soft:#161C21; --card:#1B2227;
+      --line:rgba(255,255,255,.08); --text:#EDF1F3;
+      --text-soft:#9BA7AD; --accent:#5EE6C1; --accent-2:#F2B84B;
+      --radius:12px; --maxw:1140px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,sans-serif}
+    h1,h2,h3{font-family:"Space Grotesk",sans-serif;margin:0}
+    a{color:inherit}
+    .wrap{max-width:var(--maxw);margin:auto;padding:0 32px}
+    nav{position:sticky;top:0;z-index:50;background:rgba(15,20,23,.88);
+      backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+    nav .wrap{height:70px;display:flex;align-items:center;justify-content:space-between}
+    .brand{font-family:"Space Grotesk";font-size:20px;font-weight:700;display:flex;align-items:center;gap:8px}
+    .dot{width:10px;height:10px;border-radius:50%;background:var(--accent);
+      box-shadow:0 0 12px var(--accent)}
+    .navlinks{display:flex;gap:30px;font-size:14px;color:var(--text-soft)}
+    .navlinks a{text-decoration:none}
+    .navlinks a:hover{color:var(--text)}
+    .navcta{background:var(--accent);color:#0F1417;padding:9px 18px;border-radius:6px;
+      font-size:14px;font-weight:600;text-decoration:none}
+    .hero{text-align:center;padding:85px 0 65px}
+    .kicker{color:var(--accent);font-size:14px;letter-spacing:.08em;
+      text-transform:uppercase;margin-bottom:18px}
+    .hero h1{font-size:52px;line-height:1.1}
+    .hero p{max-width:650px;margin:20px auto 0;color:var(--text-soft);
+      font-size:17px;line-height:1.7}
+    section{padding:70px 0}
+    .grid{display:grid;grid-template-columns:1.15fr .85fr;gap:55px;align-items:center}
+    .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:32px}
+    h2{font-size:32px;margin-bottom:15px}
+    .text{color:var(--text-soft);font-size:15px;line-height:1.75}
+    .features{display:grid;grid-template-columns:1fr 1fr;gap:15px;margin-top:25px}
+    .feature{background:var(--bg-soft);border:1px solid var(--line);padding:20px;border-radius:10px}
+    .feature-icon{font-size:24px;margin-bottom:10px}
+    .feature h3{font-size:17px;margin-bottom:7px}
+    .feature p{color:var(--text-soft);font-size:13px;line-height:1.55;margin:0}
+    .mission{background:var(--bg-soft);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+    .mission-box{text-align:center;max-width:760px;margin:auto}
+    .mission-box p{color:var(--text-soft);font-size:16px;line-height:1.8}
+    .contact{background:var(--card);border:1px solid var(--line);border-radius:16px;
+      padding:45px;text-align:center}
+    .contact p{color:var(--text-soft);line-height:1.7}
+    .phone{display:inline-block;margin-top:15px;color:var(--accent);font-weight:600;text-decoration:none}
+    footer{border-top:1px solid var(--line);padding:32px 0}
+    footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:15px}
+    footer small{color:var(--text-soft)}
+    @media(max-width:800px){
+      .grid{grid-template-columns:1fr}
+      .navlinks{display:none}
+      .hero h1{font-size:38px}
+      .features{grid-template-columns:1fr}
+    }
+    @media(max-width:600px){
+      .wrap{padding:0 20px}
+      .contact{padding:30px 20px}
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a class="brand" href="index.html" style="text-decoration:none">
+      <span class="dot"></span>Salik Tahir
+    </a>
+    <div class="navlinks">
+      <a href="index.html#tools">Tools</a>
+      <a href="about.html">About</a>
+      <a href="index.html#contact">Contact</a>
+    </div>
+    <a class="navcta" href="index.html#contact">Contact Us</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="kicker">About Salik Tahir</div>
+    <h1>Making AI Tools Easier to Discover</h1>
+    <p>
+      Salik Tahir is a curated platform for discovering useful AI tools
+      for writing, design, development, data analysis, audio, and productivity.
+    </p>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <div class="grid">
+      <div>
+        <h2>Who We Are</h2>
+        <p class="text">
+          Welcome to Salik Tahir. Our website brings useful AI tools together
+          in one simple place, helping visitors explore different solutions
+          without having to search through hundreds of options.
+        </p>
+        <p class="text">
+          We focus on practical AI tools that can help with everyday work,
+          creativity, development, analysis, communication, and productivity.
+        </p>
+      </div>
+
+      <div class="card">
+        <h2>Our Purpose</h2>
+        <p class="text">
+          Our goal is to make discovering AI tools simple, organized, and
+          accessible for everyone.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="mission">
+  <div class="wrap">
+    <div class="mission-box">
+      <h2>What You Can Find</h2>
+      <p>
+        Explore tools across six main areas designed around common AI use cases.
+      </p>
+
+      <div class="features">
+        <div class="feature">
+          <div class="feature-icon">✍️</div>
+          <h3>AI Writing</h3>
+          <p>Tools for drafting, editing, articles, emails, and reports.</p>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">🎨</div>
+          <h3>AI Design</h3>
+          <p>Tools for artwork, logos, images, and creative designs.</p>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">💻</div>
+          <h3>AI Development</h3>
+          <p>Tools that assist with coding, suggestions, and bug fixes.</p>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">📊</div>
+          <h3>AI Analytics</h3>
+          <p>Tools for spreadsheets, charts, trends, and insights.</p>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">🎙️</div>
+          <h3>AI Audio</h3>
+          <p>Tools for voiceovers, transcription, and audio improvement.</p>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">🗓️</div>
+          <h3>Productivity</h3>
+          <p>Tools for tasks, meeting summaries, and daily planning.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="contact">
+      <h2>Get in Touch</h2>
+      <p>
+        Have an AI tool you'd like listed, or need help finding the right
+        tool for your work? Reach out to us.
+      </p>
+      <a class="phone" href="tel:+923709203862">0370 9203862</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <a class="brand" href="index.html" style="font-size:16px;text-decoration:none">
+      <span class="dot"></span>SALIKTAHIR
+    </a>
+    <small>© 2026 salikTAHIR. All rights reserved.</small>
+  </div>
+</footer>
+
+</body>
+</html>
