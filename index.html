@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Salik Tahir — Discover the Best AI Tools</title>
+  <title>Salik Tahir — Personal Website</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -350,4 +350,848 @@
     }
 
 
-    .pricing-head h2
+    .pricing-head h2 {
+      font-size: 40px;
+    }
+
+
+    .pricing-head p {
+      color: var(--text-soft);
+      margin-top: 12px;
+      font-size: 15px;
+    }
+
+
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+
+    .pricing-card {
+      background: #10181a;
+      border: 1px solid #263337;
+      border-radius: 14px;
+      padding: 28px;
+      min-height: 214px;
+      transition: transform .2s ease, border-color .2s ease;
+    }
+
+
+    .pricing-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(94,230,193,0.45);
+    }
+
+
+    .pricing-card h3 {
+      font-size: 19px;
+      margin-bottom: 17px;
+    }
+
+
+    .pricing-price {
+      color: var(--accent);
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 30px;
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 17px;
+    }
+
+
+    .pricing-card p {
+      color: var(--text-soft);
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+
+    @media (max-width: 800px) {
+      .pricing-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+
+    /* =========================
+       STATS
+       ========================= */
+
+    .stat-strip {
+      background: var(--bg-soft);
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      padding: 46px 0;
+    }
+
+
+    .stat-strip .wrap {
+      display: flex;
+      justify-content: space-around;
+      text-align: center;
+      flex-wrap: wrap;
+      gap: 24px;
+    }
+
+
+    .stat-num {
+      font-family: 'Space Grotesk';
+      font-size: 36px;
+      color: var(--accent-2);
+    }
+
+
+    .stat-label {
+      color: var(--text-soft);
+      font-size: 14px;
+      margin-top: 6px;
+    }
+
+
+    /* =========================
+       CONTACT
+       ========================= */
+
+    .contact {
+      background: var(--card);
+      border-radius: 16px;
+      padding: 56px;
+      margin: 0 0 30px;
+      border: 1px solid var(--line);
+    }
+
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: center;
+    }
+
+
+    @media (max-width: 800px) {
+      .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+    }
+
+
+    .contact h2 {
+      font-size: 30px;
+      margin-bottom: 14px;
+    }
+
+
+    .contact p.lede {
+      color: var(--text-soft);
+      font-size: 15px;
+      line-height: 1.6;
+      max-width: 420px;
+    }
+
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-top: 20px;
+    }
+
+
+    .contact-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 10px;
+      background: rgba(94,230,193,0.12);
+      color: var(--accent);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      flex-shrink: 0;
+    }
+
+
+    .contact-label {
+      font-size: 12px;
+      color: var(--text-soft);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+
+    .contact-value {
+      font-size: 18px;
+      font-weight: 600;
+      margin-top: 2px;
+    }
+
+
+    .contact-value a {
+      text-decoration: none;
+      color: var(--text);
+    }
+
+
+    .contact-value a:hover {
+      color: var(--accent);
+    }
+
+
+    /* =========================
+       FOOTER
+       ========================= */
+
+    footer {
+      border-top: 1px solid var(--line);
+      padding: 35px 0;
+    }
+
+
+    footer .wrap {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 25px;
+    }
+
+
+    footer small {
+      color: var(--text-soft);
+      font-size: 13px;
+    }
+
+
+    /* SOCIAL LINKS */
+
+    .social-links {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+
+    .social-link {
+      width: 42px;
+      height: 42px;
+      border: 1px solid var(--line);
+      border-radius: 9px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      color: var(--text-soft);
+      background: rgba(255,255,255,0.02);
+      transition:
+        transform 0.2s ease,
+        color 0.2s ease,
+        border-color 0.2s ease,
+        background 0.2s ease;
+    }
+
+
+    .social-link svg {
+      width: 20px;
+      height: 20px;
+      fill: currentColor;
+    }
+
+
+    .social-link:hover {
+      transform: translateY(-3px);
+      color: var(--accent);
+      border-color: rgba(94,230,193,0.45);
+      background: rgba(94,230,193,0.08);
+    }
+
+
+    .social-link.whatsapp:hover {
+      color: #25D366;
+      border-color: rgba(37,211,102,0.45);
+      background: rgba(37,211,102,0.08);
+    }
+
+
+    @media (max-width: 650px) {
+
+      footer .wrap {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .social-links {
+        order: 2;
+      }
+
+    }
+
+  </style>
+</head>
+
+
+<body>
+
+
+  <!-- =========================
+       NAVBAR
+       ========================= -->
+
+  <nav>
+
+    <div class="wrap">
+
+      <div class="brand">
+        <span class="dot"></span>
+        Salik Tahir
+      </div>
+
+
+      <div class="navlinks">
+
+        <a href="#tools">
+          About
+        </a>
+
+        <a href="#pricing">
+          Pricing
+        </a>
+
+        <a href="#contact">
+          Contact
+        </a>
+
+      </div>
+
+
+      <a class="navcta" href="#contact">
+        Contact Us
+      </a>
+
+    </div>
+
+  </nav>
+
+
+
+  <!-- =========================
+       HERO
+       ========================= -->
+
+  <section class="hero">
+
+    <div class="wrap">
+
+      <div class="kicker">
+        Personal Website
+      </div>
+
+
+      <h1>
+        Welcome to Salik Tahir
+      </h1>
+
+
+      <p>
+        I'm Salik Tahir, a website developer who enjoys coding,
+        playing games, and discovering great food.
+      </p>
+
+
+      <div class="hero-cta">
+
+        <a class="btn btn-primary" href="#tools">
+          Explore
+        </a>
+
+
+        <a class="btn btn-outline" href="#contact">
+          Get in Touch
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =========================
+       ABOUT ME
+       ========================= -->
+
+  <section id="tools">
+
+    <div class="wrap">
+
+      <div class="section-head">
+
+        <h2>
+          About Me
+        </h2>
+
+        <p>
+          A few things I enjoy and work on.
+        </p>
+
+      </div>
+
+
+      <div class="tool-grid">
+
+
+        <div class="tool-card">
+
+          <div
+            class="tool-icon"
+            style="background:rgba(94,230,193,0.15); color:var(--accent);"
+          >
+            🌐
+          </div>
+
+
+          <h3>
+            Website Developer
+          </h3>
+
+
+          <p>
+            I enjoy creating websites, working with HTML and CSS,
+            and building modern web experiences.
+          </p>
+
+
+          <span class="tool-tag">
+            Development
+          </span>
+
+        </div>
+
+
+
+        <div class="tool-card">
+
+          <div
+            class="tool-icon"
+            style="background:rgba(242,184,75,0.15); color:var(--accent-2);"
+          >
+            🎮
+          </div>
+
+
+          <h3>
+            Gaming
+          </h3>
+
+
+          <p>
+            I enjoy playing games in my free time and exploring
+            different gaming experiences.
+          </p>
+
+
+          <span class="tool-tag">
+            Games
+          </span>
+
+        </div>
+
+
+
+        <div class="tool-card">
+
+          <div
+            class="tool-icon"
+            style="background:rgba(94,230,193,0.15); color:var(--accent);"
+          >
+            🍔
+          </div>
+
+
+          <h3>
+            Food Lover
+          </h3>
+
+
+          <p>
+            I love eating food and trying different dishes,
+            flavors, and cuisines.
+          </p>
+
+
+          <span class="tool-tag">
+            Food
+          </span>
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =========================
+       WEBSITE PACKAGES
+       ========================= -->
+
+  <section id="pricing" class="pricing-section">
+
+    <div class="wrap">
+
+
+      <div class="pricing-head">
+
+        <h2>
+          Website Packages
+        </h2>
+
+        <p>
+          Simple packages for different website needs.
+        </p>
+
+      </div>
+
+
+      <div class="pricing-grid">
+
+
+        <div class="pricing-card">
+
+          <h3>
+            Starter
+          </h3>
+
+          <div class="pricing-price">
+            Rs. 15,000
+          </div>
+
+          <p>
+            1-page professional website with responsive design.
+          </p>
+
+        </div>
+
+
+
+        <div class="pricing-card">
+
+          <h3>
+            Business
+          </h3>
+
+          <div class="pricing-price">
+            Rs. 30,000
+          </div>
+
+          <p>
+            Multi-page website with services, about and contact sections.
+          </p>
+
+        </div>
+
+
+
+        <div class="pricing-card">
+
+          <h3>
+            Custom
+          </h3>
+
+          <div class="pricing-price">
+            Let's Talk
+          </div>
+
+          <p>
+            Custom website according to your business requirements.
+          </p>
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =========================
+       STATS
+       ========================= -->
+
+  <div class="stat-strip">
+
+    <div class="wrap">
+
+
+      <div>
+
+        <div class="stat-num">
+          30+
+        </div>
+
+        <div class="stat-label">
+          Typing Speed
+        </div>
+
+      </div>
+
+
+      <div>
+
+        <div class="stat-num">
+          6
+        </div>
+
+        <div class="stat-label">
+          Categories
+        </div>
+
+      </div>
+
+
+      <div>
+
+        <div class="stat-num">
+          2%
+        </div>
+
+        <div class="stat-label">
+          Free to Browse
+        </div>
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+
+
+  <!-- =========================
+       CONTACT
+       ========================= -->
+
+  <section id="contact">
+
+    <div class="wrap">
+
+      <div class="contact">
+
+        <div class="contact-grid">
+
+
+          <div>
+
+            <h2>
+              Get in touch
+            </h2>
+
+
+            <p class="lede">
+              Have a tool you'd like listed, or need help finding
+              the right one for your work? Reach out.
+            </p>
+
+          </div>
+
+
+          <div>
+
+            <!-- PHONE -->
+
+            <div class="contact-item">
+
+              <div class="contact-icon">
+                📞
+              </div>
+
+
+              <div>
+
+                <div class="contact-label">
+                  Phone
+                </div>
+
+
+                <div class="contact-value">
+
+                  <a href="tel:+923709203862">
+                    0370 9203862
+                  </a>
+
+                </div>
+
+              </div>
+
+            </div>
+
+
+            <!-- WHATSAPP -->
+
+            <div class="contact-item">
+
+              <div class="contact-icon">
+                💬
+              </div>
+
+
+              <div>
+
+                <div class="contact-label">
+                  WhatsApp
+                </div>
+
+
+                <div class="contact-value">
+
+                  <a
+                    href="https://wa.me/923709203862"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    +92 370 9203862
+                  </a>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =========================
+       FOOTER
+       ========================= -->
+
+  <footer>
+
+    <div class="wrap">
+
+
+      <div class="brand" style="font-size:16px;">
+
+        <span class="dot"></span>
+
+        SALIKTAHIR
+
+      </div>
+
+
+      <!-- SOCIAL MEDIA ICONS -->
+
+      <div class="social-links">
+
+
+        <!-- TIKTOK -->
+
+        <a
+          class="social-link"
+          href="https://www.tiktok.com/@salikraju123"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="TikTok"
+          title="TikTok"
+        >
+
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-3.77V2h-3.45v13.67a2.5 2.5 0 1 1-2.5-2.5c.17 0 .33.02.49.05V9.74a6 6 0 1 0 5.96 6V9.06a8.16 8.16 0 0 0 4.77 1.53V7.14a4.85 4.85 0 0 1-1.5-.45z"/>
+          </svg>
+
+        </a>
+
+
+
+        <!-- FACEBOOK -->
+
+        <a
+          class="social-link"
+          href="https://www.facebook.com/profile.php?id=61584913797671"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Facebook"
+          title="Facebook"
+        >
+
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M14 8h3V4h-3c-3.31 0-5 1.69-5 5v3H6v4h3v8h4v-8h3.5l.5-4H13V9c0-.67.33-1 1-1z"/>
+          </svg>
+
+        </a>
+
+
+
+        <!-- INSTAGRAM -->
+
+        <a
+          class="social-link"
+          href="https://www.instagram.com/saliktahir.pk/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Instagram"
+          title="Instagram"
+        >
+
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M7.8 2h8.4A5.8 5.8 0 0 1 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8A5.8 5.8 0 0 1 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2zm-.2 2A3.6 3.6 0 0 0 4 7.6v8.8A3.6 3.6 0 0 0 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6A3.6 3.6 0 0 0 16.4 4H7.6zm8.65 1.5a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5zM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6z"/>
+          </svg>
+
+        </a>
+
+
+
+        <!-- WHATSAPP -->
+
+        <a
+          class="social-link whatsapp"
+          href="https://wa.me/923709203862"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="WhatsApp"
+          title="WhatsApp"
+        >
+
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M20.52 3.48A11.84 11.84 0 0 0 12.07 0C5.5 0 .15 5.35.15 11.93c0 2.1.55 4.15 1.6 5.96L.05 24l6.25-1.64a11.9 11.9 0 0 0 5.77 1.47h.01c6.57 0 11.92-5.35 11.92-11.93 0-3.18-1.24-6.17-3.48-8.42zM12.08 21.8h-.01a9.86 9.86 0 0 1-5.02-1.37l-.36-.21-3.71.97.99-3.62-.23-.37a9.85 9.85 0 0 1-1.51-5.27C2.23 6.47 6.65 2.05 12.08 2.05a9.82 9.82 0 0 1 6.98 2.9 9.83 9.83 0 0 1 2.89 6.99c0 5.44-4.42 9.86-9.87 9.86zm5.41-7.39c-.3-.15-1.77-.87-2.05-.97-.28-.1-.48-.15-.68.15-.2.3-.78.97-.96 1.17-.18.2-.35.22-.65.07-.3-.15-1.25-.46-2.38-1.47-.88-.78-1.47-1.74-1.64-2.03-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.53.15-.18.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.68-1.64-.93-2.24-.24-.58-.49-.5-.68-.51h-.58c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.49s1.07 2.89 1.22 3.09c.15.2 2.1 3.21 5.09 4.5.71.31 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.08 1.77-.72 2.02-1.42.25-.7.25-1.29.17-1.42-.08-.12-.27-.2-.57-.35z"/>
+          </svg>
+
+        </a>
+
+
+      </div>
+
+
+      <small>
+        © 2026 salikTAHIR. All rights reserved.
+      </small>
+
+
+    </div>
+
+  </footer>
+
+
+</body>
+</html>
