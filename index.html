@@ -5,18 +5,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Salik Tahir | Scriptbaker — Web, Mobile, AI & SEO</title>
+<title>Salik AI | Web Developer & Digital Solutions</title>
 
-<meta name="description" content="Salik Tahir and Scriptbaker. Professional Web Development, Mobile Development, Artificial Intelligence and SEO services.">
-<meta name="keywords" content="Salik Tahir, Scriptbaker, Web Development, Mobile Development, AI, SEO">
+<meta name="description" content="Salik AI Web Developer - Professional Web Development, Mobile Development, Artificial Intelligence and SEO services.">
+<meta name="keywords" content="Salik AI, Salik Tahir, Web Developer, AI Developer, Scriptbaker, Mobile Development, SEO">
 <meta name="author" content="Salik Tahir">
 <meta name="robots" content="index, follow">
-<meta name="theme-color" content="#0F1417">
-
-<meta property="og:title" content="Salik Tahir | Scriptbaker">
-<meta property="og:description" content="Web, Mobile, AI and SEO Services">
-<meta property="og:type" content="website">
-<meta property="og:image" content="Web%20Development%20Neon%20Code%20Banner.png">
+<meta name="theme-color" content="#080D18">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,20 +20,20 @@
 <style>
 
 :root {
---bg:#0F1417;
---soft:#161C21;
---card:#1B2227;
---line:rgba(255,255,255,.08);
---text:#EDF1F3;
---muted:#9BA7AD;
---accent:#5EE6C1;
---gold:#F2B84B;
+--bg:#080D18;
+--card:#111B2B;
+--soft:#101827;
+--text:#F4F7FF;
+--muted:#A3AEC0;
+--accent:#00E5FF;
+--purple:#8B5CF6;
+--line:rgba(255,255,255,.10);
 }
 
 * {
-box-sizing:border-box;
 margin:0;
 padding:0;
+box-sizing:border-box;
 }
 
 html {
@@ -47,15 +42,13 @@ scroll-padding-top:90px;
 }
 
 body {
-position:relative;
-isolation:isolate;
 background:var(--bg);
 color:var(--text);
 font-family:Inter,sans-serif;
 line-height:1.6;
+position:relative;
+isolation:isolate;
 }
-
-/* BACKGROUND IMAGE */
 
 body::before {
 content:"";
@@ -63,11 +56,13 @@ position:fixed;
 inset:0;
 z-index:-1;
 pointer-events:none;
-background-image:url("Web%20Development%20Neon%20Code%20Banner.png");
+background:
+linear-gradient(rgba(8,13,24,.88),rgba(8,13,24,.88)),
+url("Web%20Development%20Neon%20Code%20Banner.png");
+background-position:center;
+background-size:cover;
 background-repeat:no-repeat;
-background-position:center center;
-background-size:min(1000px, 88vw) auto;
-opacity:0.13;
+opacity:1;
 }
 
 h1,h2,h3 {
@@ -76,39 +71,39 @@ font-family:"Space Grotesk",sans-serif;
 
 a {
 color:inherit;
+text-decoration:none;
 }
 
 .wrap {
-max-width:1140px;
+width:90%;
+max-width:1150px;
 margin:auto;
-padding:0 25px;
 }
 
-/* NAVIGATION */
+/* NAVBAR */
 
 nav {
 position:sticky;
 top:0;
 z-index:100;
-background:rgba(15,20,23,.96);
-backdrop-filter:blur(12px);
+background:rgba(8,13,24,.94);
+backdrop-filter:blur(15px);
 border-bottom:1px solid var(--line);
 }
 
-nav .wrap {
+.navbar {
 min-height:75px;
 display:flex;
-align-items:center;
 justify-content:space-between;
+align-items:center;
 gap:20px;
 }
 
-.brand {
-font:700 23px "Space Grotesk",sans-serif;
-text-decoration:none;
+.logo {
+font:700 25px "Space Grotesk";
 }
 
-.brand span {
+.logo span {
 color:var(--accent);
 }
 
@@ -120,184 +115,137 @@ gap:25px;
 .navlinks a {
 color:var(--muted);
 font-size:14px;
-text-decoration:none;
-transition:.2s;
+transition:.3s;
 }
 
 .navlinks a:hover {
 color:var(--accent);
 }
 
-.navcta,.btn {
-display:inline-block;
-padding:12px 20px;
-border-radius:7px;
-text-decoration:none;
-font-weight:600;
-transition:.25s;
-}
-
-.navcta,.primary {
+.nav-btn {
 background:var(--accent);
-color:#0F1417;
-}
-
-.navcta:hover,.primary:hover {
-background:#fff;
-transform:translateY(-2px);
+color:#07111C;
+padding:11px 20px;
+border-radius:7px;
+font-weight:700;
 }
 
 /* HERO */
 
 .hero {
+padding:100px 0;
 text-align:center;
-padding:75px 0 65px;
 }
 
-.hero-photo {
-width:150px;
-height:150px;
-object-fit:cover;
+.profile {
+width:145px;
+height:145px;
 border-radius:50%;
+object-fit:cover;
 border:3px solid var(--accent);
 margin-bottom:25px;
 }
 
-.kicker {
+.badge-text {
 color:var(--accent);
-letter-spacing:2px;
-text-transform:uppercase;
 font-size:13px;
+letter-spacing:3px;
+text-transform:uppercase;
 }
 
 .hero h1 {
-font-size:clamp(36px,6vw,58px);
-margin:18px 0;
-line-height:1.15;
+font-size:clamp(38px,7vw,68px);
+line-height:1.12;
+margin:20px 0;
+}
+
+.gradient {
+background:linear-gradient(90deg,#00E5FF,#8B5CF6);
+background-clip:text;
+-webkit-background-clip:text;
+color:transparent;
 }
 
 .hero p {
 color:var(--muted);
 max-width:650px;
-margin:0 auto 25px;
+margin:0 auto 30px;
 }
 
 .btn {
+display:inline-block;
+padding:13px 23px;
+border-radius:8px;
 margin:5px;
+font-weight:700;
+transition:.3s;
 }
 
-.outline {
-border:1px solid var(--line);
+.btn-primary {
+background:var(--accent);
+color:#07111C;
 }
 
-.outline:hover {
-border-color:var(--accent);
+.btn-outline {
+border:1px solid var(--accent);
 color:var(--accent);
+}
+
+.btn:hover {
+transform:translateY(-4px);
 }
 
 /* SCRIPTBAKER */
 
-.scriptbaker {
-padding:70px 0;
-background:rgba(22,28,33,.85);
+.script-section {
+padding:75px 0;
+background:rgba(16,24,39,.85);
 border-block:1px solid var(--line);
 }
 
-.scriptbaker-box {
+.script-grid {
 display:grid;
-grid-template-columns:1.1fr .9fr;
-gap:40px;
+grid-template-columns:1fr 1fr;
+gap:45px;
 align-items:center;
 }
 
-.scriptbaker-logo {
-display:inline-flex;
-align-items:center;
-gap:12px;
-margin-bottom:20px;
-}
-
-.logo-symbol {
-width:55px;
-height:55px;
-display:grid;
-place-items:center;
-border-radius:50%;
-background:white;
-color:#177BC0;
-font-size:30px;
+.script-logo {
+font-size:35px;
 font-weight:700;
+font-family:"Space Grotesk";
+margin-bottom:15px;
 }
 
-.scriptbaker h2 {
-font-size:clamp(30px,5vw,46px);
-letter-spacing:1px;
-}
-
-.scriptbaker h2 span {
+.script-logo span {
 color:var(--accent);
 }
 
-.scriptbaker-description {
+.script-section p {
 color:var(--muted);
-margin:15px 0 25px;
+margin:18px 0;
 }
 
-.scriptbaker-image {
+.script-banner {
 width:100%;
-border-radius:14px;
+border-radius:15px;
 border:1px solid var(--line);
 display:block;
-object-fit:cover;
-box-shadow:0 15px 45px rgba(0,0,0,.3);
 }
 
-.service-icons {
-display:grid;
-grid-template-columns:repeat(4,1fr);
-gap:12px;
-margin-top:25px;
-}
-
-.service-icons a {
-text-decoration:none;
-text-align:center;
-background:var(--card);
-border:1px solid var(--line);
-border-radius:10px;
-padding:16px 5px;
-transition:.2s;
-}
-
-.service-icons a:hover {
-border-color:var(--accent);
-transform:translateY(-4px);
-}
-
-.service-icons span {
-display:block;
-font-size:25px;
-margin-bottom:6px;
-}
-
-.service-icons strong {
-font-size:13px;
-letter-spacing:1px;
-}
-
-/* SECTIONS */
+/* SECTION HEAD */
 
 section {
-padding:70px 0;
+padding:80px 0;
 }
 
 .section-head {
 text-align:center;
-margin-bottom:40px;
+margin-bottom:45px;
 }
 
 .section-head h2 {
-font-size:34px;
+font-size:36px;
 margin-bottom:10px;
 }
 
@@ -305,95 +253,117 @@ margin-bottom:10px;
 color:var(--muted);
 }
 
-/* SERVICE CARDS */
+/* SERVICES */
 
-.tool-grid,.pricing-grid {
+.services-grid {
 display:grid;
-grid-template-columns:repeat(3,minmax(0,1fr));
-gap:20px;
+grid-template-columns:repeat(3,1fr);
+gap:22px;
 }
 
-.tool-card,.pricing-card {
-padding:27px;
-background:rgba(27,34,39,.90);
+.service-card {
+background:rgba(17,27,43,.92);
+padding:30px;
 border:1px solid var(--line);
-border-radius:12px;
-transition:.25s;
+border-radius:14px;
+transition:.3s;
 }
 
-.tool-card:hover,.pricing-card:hover {
-transform:translateY(-5px);
+.service-card:hover {
+transform:translateY(-7px);
 border-color:var(--accent);
+box-shadow:0 10px 35px rgba(0,229,255,.10);
 }
 
-.tool-icon {
-font-size:32px;
-margin-bottom:15px;
+.service-icon {
+font-size:38px;
+margin-bottom:17px;
 }
 
-.tool-card h3,.pricing-card h3 {
-margin:8px 0;
+.service-card h3 {
+font-size:21px;
+margin-bottom:12px;
 }
 
-.tool-card p,.pricing-card p {
-color:var(--muted);
-line-height:1.7;
+.service-card p {
 font-size:14px;
+color:var(--muted);
 }
 
-.tool-tag {
-display:inline-block;
-color:var(--accent);
-border:1px solid rgba(94,230,193,.3);
-padding:4px 10px;
-border-radius:20px;
-font-size:12px;
-margin-top:15px;
-}
-
-.card-link {
+.service-tag {
 display:inline-block;
 margin-top:18px;
 color:var(--accent);
-font-size:14px;
-font-weight:600;
-text-decoration:none;
+border:1px solid rgba(0,229,255,.3);
+padding:5px 12px;
+border-radius:20px;
+font-size:12px;
+}
+
+/* ABOUT */
+
+.about-box {
+background:rgba(17,27,43,.90);
+padding:40px;
+border:1px solid var(--line);
+border-radius:15px;
+text-align:center;
+}
+
+.about-box p {
+max-width:750px;
+margin:15px auto;
+color:var(--muted);
 }
 
 /* PRICING */
 
-.pricing-card {
-background:rgba(16,24,26,.92);
+.pricing-grid {
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:22px;
+}
+
+.price-card {
+background:rgba(17,27,43,.92);
+padding:30px;
+border:1px solid var(--line);
+border-radius:14px;
 }
 
 .price {
 color:var(--accent);
-font:700 28px "Space Grotesk",sans-serif;
-margin:18px 0;
+font-size:29px;
+font-weight:700;
+margin:20px 0;
+}
+
+.price-card p {
+color:var(--muted);
+font-size:14px;
 }
 
 /* STATS */
 
 .stats {
-background:rgba(22,28,33,.90);
+padding:40px 0;
+background:rgba(16,24,39,.92);
 border-block:1px solid var(--line);
-padding:35px 0;
 }
 
-.stats .wrap {
-display:flex;
-justify-content:space-around;
-gap:25px;
-flex-wrap:wrap;
+.stats-grid {
+display:grid;
+grid-template-columns:repeat(3,1fr);
 text-align:center;
+gap:20px;
 }
 
-.stat-num {
-font:700 34px "Space Grotesk",sans-serif;
-color:var(--gold);
+.stats-grid h3 {
+font-size:35px;
+color:var(--accent);
 }
 
-.stat-label {
+.stats-grid p {
 color:var(--muted);
 font-size:14px;
 }
@@ -401,70 +371,65 @@ font-size:14px;
 /* CONTACT */
 
 .contact-box {
-padding:40px;
-background:rgba(27,34,39,.92);
-border:1px solid var(--line);
-border-radius:15px;
 text-align:center;
-}
-
-.contact-box h2 {
-margin-bottom:12px;
+padding:55px 25px;
+background:rgba(17,27,43,.93);
+border:1px solid var(--line);
+border-radius:16px;
 }
 
 .contact-box p {
 color:var(--muted);
-margin-bottom:20px;
+margin:15px 0;
 }
 
 /* FOOTER */
 
 footer {
+padding:35px 0;
 border-top:1px solid var(--line);
-padding:28px 0;
-background:rgba(15,20,23,.90);
+background:rgba(8,13,24,.95);
 }
 
-footer .wrap {
+.footer-content {
 display:flex;
-align-items:center;
 justify-content:space-between;
-gap:20px;
+align-items:center;
 flex-wrap:wrap;
+gap:20px;
+}
+
+.socials {
+display:flex;
+gap:12px;
+flex-wrap:wrap;
+}
+
+.socials a {
+border:1px solid var(--line);
+padding:9px 14px;
+border-radius:7px;
+font-size:13px;
+}
+
+.socials a:hover {
+color:var(--accent);
+border-color:var(--accent);
 }
 
 footer small {
 color:var(--muted);
 }
 
-.social-links {
-display:flex;
-gap:10px;
-flex-wrap:wrap;
-}
-
-.social-link {
-border:1px solid var(--line);
-padding:10px 13px;
-border-radius:8px;
-text-decoration:none;
-font-size:13px;
-}
-
-.social-link:hover {
-color:var(--accent);
-border-color:var(--accent);
-}
-
-/* MOBILE RESPONSIVE */
+/* MOBILE */
 
 @media(max-width:800px) {
 
-.tool-grid,.pricing-grid {
+.services-grid,.pricing-grid {
 grid-template-columns:repeat(2,1fr);
 }
 
-.scriptbaker-box {
+.script-grid {
 grid-template-columns:1fr;
 }
 
@@ -472,7 +437,11 @@ grid-template-columns:1fr;
 gap:12px;
 }
 
-.navcta {
+.navlinks a {
+font-size:12px;
+}
+
+.nav-btn {
 display:none;
 }
 
@@ -480,10 +449,9 @@ display:none;
 
 @media(max-width:580px) {
 
-nav .wrap {
-padding-top:14px;
-padding-bottom:14px;
+.navbar {
 flex-wrap:wrap;
+padding:15px 0;
 }
 
 .navlinks {
@@ -491,50 +459,40 @@ width:100%;
 justify-content:space-between;
 }
 
-.navlinks a {
-font-size:12px;
-}
-
-.tool-grid,.pricing-grid {
+.services-grid,.pricing-grid {
 grid-template-columns:1fr;
 }
 
 .hero {
-padding:55px 0;
+padding:65px 0;
 }
 
-.hero-photo {
-width:125px;
-height:125px;
+.hero h1 {
+font-size:39px;
 }
 
-.service-icons {
-grid-template-columns:repeat(2,1fr);
+.profile {
+width:120px;
+height:120px;
 }
 
-.contact-box {
+.stats-grid {
+grid-template-columns:1fr;
+}
+
+.about-box {
 padding:25px;
 }
 
-footer .wrap {
+.footer-content {
 flex-direction:column;
 text-align:center;
 }
 
 body::before {
-background-size:115vw auto;
-opacity:0.10;
+background-size:auto 100%;
 }
 
-}
-
-@media(prefers-reduced-motion:reduce) {
-html {
-scroll-behavior:auto;
-}
-* {
-transition:none!important;
-}
 }
 
 </style>
@@ -545,111 +503,101 @@ transition:none!important;
 <!-- NAVIGATION -->
 
 <nav>
-<div class="wrap">
+<div class="wrap navbar">
 
-<a class="brand" href="index.html">
-Salik Tahir<span>.</span>
+<a href="index.html" class="logo">
+SALIK<span>AI.</span>
 </a>
 
 <div class="navlinks">
+<a href="#home">Home</a>
 <a href="#about">About</a>
-<a href="#scriptbaker">Services</a>
+<a href="#services">Services</a>
 <a href="#pricing">Pricing</a>
 <a href="contact.html">Contact</a>
 </div>
 
-<a class="navcta" href="contact.html">Contact Me</a>
+<a href="contact.html" class="nav-btn">Hire Me</a>
 
 </div>
 </nav>
 
 <!-- HERO -->
 
-<header class="hero">
+<header class="hero" id="home">
 <div class="wrap">
 
-<img class="hero-photo"
+<img
 src="WhatsApp Image 2026-10-26 at 8.58.28 PM.jpeg"
-alt="Salik Tahir">
+alt="Salik Tahir"
+class="profile"
+>
 
-<div class="kicker">Personal Website</div>
+<div class="badge-text">
+AI & WEB DEVELOPER
+</div>
 
-<h1>Welcome to Salik Tahir</h1>
+<h1>
+Hi, I'm <span class="gradient">Salik Tahir</span>
+<br>
+Building the Digital Future
+</h1>
 
 <p>
-I'm Salik Tahir, a website developer who enjoys coding,
-playing games, technology and discovering great food.
+I am Salik Tahir, a Web Developer and technology enthusiast.
+I create modern websites, explore Artificial Intelligence,
+build digital experiences and work with SEO.
 </p>
 
-<a class="btn primary" href="#scriptbaker">Explore Services</a>
+<a href="#services" class="btn btn-primary">
+Explore Services
+</a>
 
-<a class="btn outline" href="contact.html">Get in Touch</a>
+<a href="contact.html" class="btn btn-outline">
+Contact Me
+</a>
 
 </div>
 </header>
 
-<!-- SCRIPTBAKER SECTION -->
+<!-- SCRIPTBAKER -->
 
-<section class="scriptbaker" id="scriptbaker">
-<div class="wrap">
-
-<div class="scriptbaker-box">
+<section class="script-section">
+<div class="wrap script-grid">
 
 <div>
 
-<div class="scriptbaker-logo">
-<div class="logo-symbol">S</div>
-<h2>SCRIPT<span>BAKER</span></h2>
+<div class="script-logo">
+SCRIPT<span>BAKER</span>
 </div>
 
-<div class="kicker">Technology & Digital Services</div>
+<div class="badge-text">
+Digital Technology Solutions
+</div>
 
-<h2>We build, scale and support your tech.</h2>
+<h2>We Build, Scale & Support Your Tech</h2>
 
-<p class="scriptbaker-description">
-Explore modern web development, mobile solutions,
-artificial intelligence and search engine optimization.
-Technology to help your ideas grow.
+<p>
+Scriptbaker focuses on Web Development, Mobile Development,
+Artificial Intelligence and SEO solutions.
+We help turn digital ideas into reality.
 </p>
 
-<div class="service-icons">
-
-<a href="#web">
-<span>💻</span>
-<strong>WEB</strong>
+<a href="#services" class="btn btn-primary">
+Discover Scriptbaker
 </a>
-
-<a href="#mobile">
-<span>📱</span>
-<strong>MOBILE</strong>
-</a>
-
-<a href="#ai">
-<span>🤖</span>
-<strong>AI</strong>
-</a>
-
-<a href="#seo">
-<span>🚀</span>
-<strong>SEO</strong>
-</a>
-
-</div>
-
-<br>
-
-<a href="#services" class="btn primary">Explore All Services</a>
 
 </div>
 
 <div>
-<img class="scriptbaker-image"
+<img
 src="scriptbaker-office.png"
-alt="Scriptbaker Web, Mobile, AI and SEO banner"
-loading="lazy">
+alt="Scriptbaker Web Mobile AI SEO"
+class="script-banner"
+loading="lazy"
+>
 </div>
 
-</div>
 </div>
 </section>
 
@@ -660,40 +608,23 @@ loading="lazy">
 
 <div class="section-head">
 <h2>About Me</h2>
-<p>A few things I enjoy and work on.</p>
+<p>Meet the person behind Salik AI.</p>
 </div>
 
-<div class="tool-grid">
+<div class="about-box">
 
-<article class="tool-card">
-<div class="tool-icon">🌐</div>
-<h3>Website Developer</h3>
-<p>
-I enjoy creating websites, working with HTML and CSS,
-and building modern web experiences.
-</p>
-<span class="tool-tag">Development</span>
-</article>
+<h2>Salik Tahir</h2>
 
-<article class="tool-card">
-<div class="tool-icon">🎮</div>
-<h3>Gaming</h3>
 <p>
-I enjoy playing games in my free time and
-exploring different gaming experiences.
+I enjoy web development, coding, AI technology,
+playing games and discovering new ideas.
+My goal is to keep learning and create useful
+digital experiences.
 </p>
-<span class="tool-tag">Games</span>
-</article>
 
-<article class="tool-card">
-<div class="tool-icon">🍔</div>
-<h3>Food Lover</h3>
-<p>
-I love eating food and trying different dishes,
-flavors and cuisines.
-</p>
-<span class="tool-tag">Food</span>
-</article>
+<a href="contact.html" class="btn btn-outline">
+Let's Connect
+</a>
 
 </div>
 </div>
@@ -705,76 +636,70 @@ flavors and cuisines.
 <div class="wrap">
 
 <div class="section-head">
-<h2>Our Services</h2>
-<p>Web, Mobile, AI and SEO solutions.</p>
+<h2>My Services</h2>
+<p>Technology solutions for a digital world.</p>
 </div>
 
-<div class="tool-grid">
+<div class="services-grid">
 
-<article class="tool-card" id="web">
-<div class="tool-icon">💻</div>
+<article class="service-card">
+<div class="service-icon">💻</div>
 <h3>Web Development</h3>
 <p>
-Modern, responsive and professional websites
-for personal brands and businesses.
+Professional, modern and responsive websites
+using modern web technologies.
 </p>
-<span class="tool-tag">WEB</span>
-<a href="contact.html" class="card-link">Get Started →</a>
+<span class="service-tag">WEB DEVELOPMENT</span>
 </article>
 
-<article class="tool-card" id="mobile">
-<div class="tool-icon">📱</div>
+<article class="service-card">
+<div class="service-icon">📱</div>
 <h3>Mobile Development</h3>
 <p>
-Mobile-friendly digital experiences
-and modern mobile solutions.
+Mobile-friendly websites and modern
+mobile digital experiences.
 </p>
-<span class="tool-tag">MOBILE</span>
-<a href="contact.html" class="card-link">Get Started →</a>
+<span class="service-tag">MOBILE</span>
 </article>
 
-<article class="tool-card" id="ai">
-<div class="tool-icon">🤖</div>
+<article class="service-card">
+<div class="service-icon">🤖</div>
 <h3>Artificial Intelligence</h3>
 <p>
-Explore AI tools, intelligent technology
-and AI-powered digital solutions.
+Explore AI tools and intelligent
+technology-powered solutions.
 </p>
-<span class="tool-tag">AI</span>
-<a href="contact.html" class="card-link">Get Started →</a>
+<span class="service-tag">AI TECHNOLOGY</span>
 </article>
 
-<article class="tool-card" id="seo">
-<div class="tool-icon">🚀</div>
+<article class="service-card">
+<div class="service-icon">🚀</div>
 <h3>SEO Optimization</h3>
 <p>
 Improve website structure, search visibility,
-metadata and search engine performance.
+metadata and SEO performance.
 </p>
-<span class="tool-tag">SEO</span>
-<a href="contact.html" class="card-link">Get Started →</a>
+<span class="service-tag">SEO</span>
 </article>
 
-<article class="tool-card">
-<div class="tool-icon">🎨</div>
+<article class="service-card">
+<div class="service-icon">🎨</div>
 <h3>Web Design</h3>
 <p>
-Beautiful layouts, clean interfaces
-and modern website designs.
+Beautiful layouts, modern user interfaces
+and creative website experiences.
 </p>
-<span class="tool-tag">DESIGN</span>
-<a href="contact.html" class="card-link">Get Started →</a>
+<span class="service-tag">DESIGN</span>
 </article>
 
-<article class="tool-card">
-<div class="tool-icon">⚙️</div>
+<article class="service-card">
+<div class="service-icon">⚙️</div>
 <h3>Digital Solutions</h3>
 <p>
-Creative technology solutions
-for different digital needs.
+Creative digital ideas and technology
+solutions for different needs.
 </p>
-<span class="tool-tag">TECHNOLOGY</span>
-<a href="contact.html" class="card-link">Get Started →</a>
+<span class="service-tag">TECHNOLOGY</span>
 </article>
 
 </div>
@@ -788,30 +713,30 @@ for different digital needs.
 
 <div class="section-head">
 <h2>Website Packages</h2>
-<p>Simple packages for different website needs.</p>
+<p>Choose a package for your project.</p>
 </div>
 
 <div class="pricing-grid">
 
-<article class="pricing-card">
+<article class="price-card">
 <h3>Starter</h3>
 <div class="price">Rs. 15,000</div>
-<p>1-page professional website with responsive design.</p>
-<a href="contact.html" class="card-link">Choose Package →</a>
+<p>One-page professional website with responsive design.</p>
+<a href="contact.html" class="btn btn-outline">Get Started</a>
 </article>
 
-<article class="pricing-card">
+<article class="price-card">
 <h3>Business</h3>
 <div class="price">Rs. 30,000</div>
-<p>Multi-page website with services, about and contact pages.</p>
-<a href="contact.html" class="card-link">Choose Package →</a>
+<p>Multi-page business website with services and contact.</p>
+<a href="contact.html" class="btn btn-primary">Get Started</a>
 </article>
 
-<article class="pricing-card">
+<article class="price-card">
 <h3>Custom</h3>
 <div class="price">Let's Talk</div>
-<p>Custom website according to your business requirements.</p>
-<a href="contact.html" class="card-link">Contact Me →</a>
+<p>Custom website based on your project requirements.</p>
+<a href="contact.html" class="btn btn-outline">Contact Me</a>
 </article>
 
 </div>
@@ -821,21 +746,21 @@ for different digital needs.
 <!-- STATS -->
 
 <div class="stats">
-<div class="wrap">
+<div class="wrap stats-grid">
 
 <div>
-<div class="stat-num">30+</div>
-<div class="stat-label">Typing Speed</div>
+<h3>WEB</h3>
+<p>Development</p>
 </div>
 
 <div>
-<div class="stat-num">4</div>
-<div class="stat-label">Main Services</div>
+<h3>AI</h3>
+<p>Artificial Intelligence</p>
 </div>
 
 <div>
-<div class="stat-num">24/7</div>
-<div class="stat-label">Online Access</div>
+<h3>SEO</h3>
+<p>Search Optimization</p>
 </div>
 
 </div>
@@ -843,52 +768,56 @@ for different digital needs.
 
 <!-- CONTACT -->
 
-<section id="contact">
+<section>
 <div class="wrap">
 
 <div class="contact-box">
 
-<h2>Let's Build Something Great!</h2>
+<h2>Let's Build Something Amazing!</h2>
 
 <p>
-Have a project or a question?
-Let's discuss your next digital idea.
+Have a website project or digital idea?
+Let's work together.
 </p>
 
-<a href="contact.html" class="btn primary">
-Open Contact Page →
+<a href="contact.html" class="btn btn-primary">
+Contact Salik
 </a>
 
 </div>
+
 </div>
 </section>
 
 <!-- FOOTER -->
 
 <footer>
-<div class="wrap">
+<div class="wrap footer-content">
 
-<a class="brand" href="index.html">
-SALIKTAHIR<span>.</span>
+<a href="index.html" class="logo">
+SALIK<span>AI.</span>
 </a>
 
-<div class="social-links">
+<div class="socials">
 
-<a class="social-link"
-href="https://www.tiktok.com/@salikraju123"
-target="_blank" rel="noopener noreferrer">TikTok</a>
+<a href="https://www.tiktok.com/@salikraju123"
+target="_blank" rel="noopener noreferrer">
+TikTok
+</a>
 
-<a class="social-link"
-href="https://www.facebook.com/profile.php?id=61584913797671"
-target="_blank" rel="noopener noreferrer">Facebook</a>
+<a href="https://www.facebook.com/profile.php?id=61584913797671"
+target="_blank" rel="noopener noreferrer">
+Facebook
+</a>
 
-<a class="social-link"
-href="https://www.instagram.com/saliktahir.pk/"
-target="_blank" rel="noopener noreferrer">Instagram</a>
+<a href="https://www.instagram.com/saliktahir.pk/"
+target="_blank" rel="noopener noreferrer">
+Instagram
+</a>
 
 </div>
 
-<small>© 2026 Salik Tahir. All rights reserved.</small>
+<small>© 2026 Salik Tahir. All Rights Reserved.</small>
 
 </div>
 </footer>
