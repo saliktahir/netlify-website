@@ -4,344 +4,673 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Contact | Salik Tahir — Scriptbaker</title>
+<title>Salik Tahir | Scriptbaker — Web, Mobile, AI & SEO</title>
 
-<meta name="description" content="Contact Salik Tahir for website development, mobile apps, AI solutions, SEO and IT services.">
+<meta name="description" content="Salik Tahir and Scriptbaker provide web development, mobile solutions, AI integration, SEO, web design and digital services.">
+<meta name="keywords" content="Salik Tahir, Scriptbaker, Web Development, Mobile Apps, AI Solutions, SEO, Website Developer Pakistan">
+<meta name="author" content="Salik Tahir">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#0F1417">
+
+<meta property="og:title" content="Salik Tahir | Scriptbaker">
+<meta property="og:description" content="We build, scale and support your tech: Web, Mobile, AI and SEO.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="scriptbaker-background.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
+
 :root {
-    --bg: #0F1417;
-    --soft: #161C21;
-    --card: #1B2227;
-    --line: rgba(255,255,255,.09);
-    --text: #EDF1F3;
-    --muted: #9BA7AD;
-    --accent: #5EE6C1;
-    --gold: #F2B84B;
+  --bg:#0F1417;
+  --soft:#161C21;
+  --card:#1B2227;
+  --line:rgba(255,255,255,.09);
+  --text:#EDF1F3;
+  --muted:#AAB5BB;
+  --accent:#5EE6C1;
+  --gold:#F2B84B;
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
 }
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior:smooth;
+  scroll-padding-top:90px;
 }
 
 body {
-    background: var(--bg);
-    color: var(--text);
-    font-family: 'Inter', sans-serif;
-    line-height: 1.6;
+  background:var(--bg);
+  color:var(--text);
+  font-family:Inter,Arial,sans-serif;
+  line-height:1.65;
+  position:relative;
+  isolation:isolate;
 }
 
-h1, h2, h3, .brand {
-    font-family: 'Space Grotesk', sans-serif;
+/* WEBSITE BACKGROUND IMAGE */
+
+body::before {
+  content:"";
+  position:fixed;
+  inset:0;
+  z-index:-2;
+  pointer-events:none;
+  background:url("scriptbaker-background.png") center 42%/cover no-repeat;
+  opacity:.10;
+}
+
+body::after {
+  content:"";
+  position:fixed;
+  inset:0;
+  z-index:-1;
+  pointer-events:none;
+  background:linear-gradient(
+    180deg,
+    rgba(15,20,23,.88),
+    rgba(15,20,23,.94)
+  );
+}
+
+h1,h2,h3,.brand {
+  font-family:"Space Grotesk",sans-serif;
 }
 
 a {
-    color: inherit;
-    text-decoration: none;
+  color:inherit;
 }
 
 .wrap {
-    max-width: 1140px;
-    margin: auto;
-    padding: 0 25px;
+  width:min(1140px,100%);
+  margin:auto;
+  padding:0 25px;
 }
 
 /* NAVIGATION */
 
 nav {
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    background: rgba(15,20,23,.97);
-    border-bottom: 1px solid var(--line);
+  position:sticky;
+  top:0;
+  z-index:100;
+  background:rgba(12,17,20,.91);
+  backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--line);
 }
 
 nav .wrap {
-    min-height: 75px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 20px;
+  min-height:76px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
 }
 
 .brand {
-    font-size: 24px;
-    font-weight: 700;
+  font-size:23px;
+  font-weight:700;
+  text-decoration:none;
+  white-space:nowrap;
 }
 
 .brand span {
-    color: var(--accent);
+  color:var(--accent);
 }
 
 .navlinks {
-    display: flex;
-    gap: 25px;
+  display:flex;
+  align-items:center;
+  gap:24px;
 }
 
 .navlinks a {
-    color: var(--muted);
-    font-size: 14px;
+  color:var(--muted);
+  font-size:14px;
+  text-decoration:none;
+  transition:.2s;
 }
 
-.navlinks a:hover,
-.navlinks a.active {
-    color: var(--accent);
+.navlinks a:hover {
+  color:var(--accent);
 }
 
-.navcta {
-    background: var(--accent);
-    color: #0F1417;
-    padding: 11px 20px;
-    border-radius: 7px;
-    font-weight: 700;
+.navcta,.btn {
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  padding:12px 20px;
+  border-radius:8px;
+  text-decoration:none;
+  font-weight:700;
+  transition:.22s;
+  border:1px solid transparent;
 }
 
-/* HERO */
+.navcta,.primary {
+  background:var(--accent);
+  color:#0F1417;
+}
+
+.navcta:hover,.primary:hover {
+  background:#fff;
+  transform:translateY(-2px);
+}
+
+.outline {
+  border-color:rgba(255,255,255,.25);
+  color:var(--text);
+}
+
+.outline:hover {
+  border-color:var(--accent);
+  color:var(--accent);
+}
+
+/* HERO BACKGROUND IMAGE */
 
 .hero {
-    text-align: center;
-    padding: 85px 20px 55px;
+  min-height:590px;
+  display:flex;
+  align-items:center;
+  text-align:center;
+  position:relative;
+  overflow:hidden;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(5,13,20,.88),
+      rgba(5,13,20,.48),
+      rgba(5,13,20,.84)
+    ),
+    linear-gradient(
+      0deg,
+      rgba(15,20,23,.55),
+      rgba(15,20,23,.12)
+    ),
+    url("scriptbaker-background.png") center 42%/cover no-repeat;
+
+  border-bottom:1px solid var(--line);
 }
 
-.kicker {
-    color: var(--accent);
-    font-size: 12px;
-    font-weight: 700;
-    letter-spacing: 3px;
-    text-transform: uppercase;
+.hero .wrap {
+  padding-top:90px;
+  padding-bottom:90px;
+}
+
+.hero-content {
+  max-width:850px;
+  margin:auto;
+}
+
+.eyebrow,.kicker {
+  display:inline-flex;
+  align-items:center;
+  gap:9px;
+  color:var(--accent);
+  letter-spacing:2px;
+  text-transform:uppercase;
+  font-size:12px;
+  font-weight:700;
+}
+
+.dot {
+  width:8px;
+  height:8px;
+  border-radius:50%;
+  background:var(--accent);
+  box-shadow:0 0 14px var(--accent);
 }
 
 .hero h1 {
-    font-size: clamp(35px, 6vw, 55px);
-    margin: 15px 0;
+  font-size:clamp(38px,6vw,68px);
+  line-height:1.08;
+  margin:20px 0;
+}
+
+.hero h1 span {
+  color:var(--accent);
 }
 
 .hero p {
-    color: var(--muted);
-    max-width: 650px;
-    margin: auto;
+  max-width:690px;
+  margin:0 auto 26px;
+  color:#E0E8EC;
+  font-size:17px;
 }
 
-/* CONTACT AREA */
-
-.contact-section {
-    padding: 35px 0 85px;
+.hero-actions {
+  display:flex;
+  justify-content:center;
+  gap:12px;
+  flex-wrap:wrap;
 }
 
-.contact-layout {
-    display: grid;
-    grid-template-columns: .8fr 1.2fr;
-    gap: 25px;
-    align-items: start;
+.hero-note {
+  margin-top:25px;
+  color:#D2DCE1;
+  font-size:13px;
+  letter-spacing:.3px;
 }
 
-.info-panel,
-.form-panel {
-    background: var(--card);
-    border: 1px solid var(--line);
-    border-radius: 14px;
-    padding: 30px;
+/* SECTION SETTINGS */
+
+section {
+  padding:78px 0;
 }
 
-.info-panel h2,
-.form-panel h2 {
-    font-size: 25px;
-    margin-bottom: 12px;
+.section-head {
+  text-align:center;
+  margin:0 auto 42px;
+  max-width:700px;
 }
 
-.info-panel p {
-    color: var(--muted);
-    margin-bottom: 25px;
+.section-head h2 {
+  font-size:clamp(29px,4vw,40px);
+  margin:10px 0;
 }
 
-.info-item {
-    padding: 15px 0;
-    border-bottom: 1px solid var(--line);
+.section-head p {
+  color:var(--muted);
 }
 
-.info-item strong {
-    display: block;
-    color: var(--accent);
-    font-size: 12px;
-    letter-spacing: 1px;
+/* SCRIPTBAKER SECTION */
+
+.scriptbaker {
+  background:rgba(22,28,33,.88);
+  border-block:1px solid var(--line);
 }
 
-.info-item span {
-    color: var(--muted);
-    font-size: 14px;
+.scriptbaker-box {
+  display:grid;
+  grid-template-columns:1.1fr .9fr;
+  gap:42px;
+  align-items:center;
 }
 
-/* CONTACT FORM */
-
-.contact-form {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 17px;
+.scriptbaker-logo {
+  display:flex;
+  align-items:center;
+  gap:14px;
+  margin-bottom:20px;
 }
 
-.field {
-    min-width: 0;
+.logo-symbol {
+  width:58px;
+  height:58px;
+  display:grid;
+  place-items:center;
+  border-radius:50%;
+  background:#fff;
+  color:#1679B9;
+  font-size:30px;
+  font-weight:700;
 }
 
-.field.full {
-    grid-column: 1 / -1;
+.scriptbaker-logo h2 {
+  font-size:clamp(28px,4vw,42px);
+  letter-spacing:1px;
 }
 
-label {
-    display: block;
-    color: var(--muted);
-    font-size: 13px;
-    margin-bottom: 7px;
+.scriptbaker-logo h2 span {
+  color:var(--accent);
 }
 
-input,
-select,
-textarea {
-    width: 100%;
-    padding: 14px;
-    background: #11181C;
-    color: var(--text);
-    border: 1px solid var(--line);
-    border-radius: 7px;
-    font: inherit;
-    outline: none;
+.scriptbaker-copy h3 {
+  font-size:clamp(27px,4vw,39px);
+  line-height:1.2;
+  margin:10px 0 15px;
 }
 
-input:focus,
-select:focus,
-textarea:focus {
-    border-color: var(--accent);
+.scriptbaker-copy p {
+  color:var(--muted);
+  margin-bottom:22px;
 }
 
-input::placeholder,
-textarea::placeholder {
-    color: #77838A;
+.scriptbaker-image {
+  width:100%;
+  display:block;
+  aspect-ratio:4/3;
+  object-fit:cover;
+  border-radius:15px;
+  border:1px solid var(--line);
+  box-shadow:0 20px 55px rgba(0,0,0,.35);
 }
 
-select option {
-    background: #11181C;
+/* WEB MOBILE AI SEO ICONS */
+
+.service-icons {
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:12px;
+  margin:24px 0;
 }
 
-textarea {
-    min-height: 150px;
-    resize: vertical;
+.service-icons a {
+  background:rgba(15,20,23,.8);
+  border:1px solid var(--line);
+  border-radius:10px;
+  padding:15px 8px;
+  text-align:center;
+  text-decoration:none;
+  transition:.2s;
 }
 
-.submit-btn {
-    grid-column: 1 / -1;
-    background: var(--accent);
-    color: #0F1417;
-    border: none;
-    padding: 15px 22px;
-    border-radius: 7px;
-    font-size: 15px;
-    font-weight: 700;
-    cursor: pointer;
-    transition: .2s;
+.service-icons a:hover {
+  border-color:var(--accent);
+  transform:translateY(-4px);
 }
 
-.submit-btn:hover {
-    background: white;
-    transform: translateY(-2px);
+.service-icons span {
+  display:block;
+  font-size:25px;
+  margin-bottom:5px;
 }
 
-.form-note {
-    grid-column: 1 / -1;
-    color: var(--muted);
-    font-size: 12px;
+.service-icons strong {
+  font-size:12px;
+  letter-spacing:1px;
+}
+
+/* ABOUT SECTION */
+
+.about-grid {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:19px;
+}
+
+.info-card,
+.service-card,
+.pricing-card,
+.contact-box {
+  background:rgba(27,34,39,.92);
+  border:1px solid var(--line);
+  border-radius:13px;
+  padding:27px;
+  transition:.22s;
+}
+
+.info-card:hover,
+.service-card:hover,
+.pricing-card:hover {
+  transform:translateY(-5px);
+  border-color:var(--accent);
+}
+
+.card-icon {
+  font-size:32px;
+  margin-bottom:13px;
+}
+
+.info-card h3,
+.service-card h3,
+.pricing-card h3 {
+  font-size:20px;
+  margin-bottom:9px;
+}
+
+.info-card p,
+.service-card p,
+.pricing-card p {
+  color:var(--muted);
+  font-size:14px;
+}
+
+.tag {
+  display:inline-block;
+  margin-top:15px;
+  padding:4px 10px;
+  border-radius:20px;
+  color:var(--accent);
+  border:1px solid rgba(94,230,193,.3);
+  font-size:11px;
+}
+
+/* SERVICES */
+
+.services-section {
+  background:rgba(22,28,33,.78);
+  border-block:1px solid var(--line);
+}
+
+.service-grid {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
+}
+
+.service-card {
+  background:rgba(27,34,39,.96);
+}
+
+.card-link {
+  display:inline-block;
+  margin-top:17px;
+  color:var(--accent);
+  font-weight:700;
+  font-size:14px;
+  text-decoration:none;
+}
+
+.card-link:hover {
+  color:#fff;
+}
+
+/* STATS */
+
+.stats {
+  padding:34px 0;
+  background:rgba(10,15,18,.82);
+  border-block:1px solid var(--line);
+}
+
+.stats .wrap {
+  display:flex;
+  justify-content:space-around;
+  gap:25px;
+  flex-wrap:wrap;
+  text-align:center;
+}
+
+.stat-num {
+  font:700 34px "Space Grotesk",sans-serif;
+  color:var(--gold);
+}
+
+.stat-label {
+  color:var(--muted);
+  font-size:13px;
+}
+
+/* PRICING */
+
+.pricing-grid {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
+}
+
+.pricing-card {
+  background:rgba(27,34,39,.94);
+}
+
+.price {
+  font:700 29px "Space Grotesk",sans-serif;
+  color:var(--accent);
+  margin:15px 0;
+}
+
+.pricing-card.featured {
+  border-color:var(--accent);
+  box-shadow:0 0 25px rgba(94,230,193,.08);
+}
+
+/* CONTACT SECTION */
+
+.contact-box {
+  text-align:center;
+  padding:48px 25px;
+  background:rgba(27,34,39,.95);
+}
+
+.contact-box h2 {
+  font-size:clamp(27px,4vw,38px);
+  margin:10px 0;
+}
+
+.contact-box p {
+  color:var(--muted);
+  margin:0 auto 23px;
+  max-width:620px;
 }
 
 /* FOOTER */
 
 footer {
-    border-top: 1px solid var(--line);
-    padding: 30px 0;
-    background: var(--soft);
+  padding:30px 0;
+  border-top:1px solid var(--line);
+  background:rgba(10,15,18,.92);
 }
 
 footer .wrap {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 20px;
-    flex-wrap: wrap;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:18px;
+  flex-wrap:wrap;
 }
 
 footer small {
-    color: var(--muted);
+  color:var(--muted);
 }
 
 .social-links {
-    display: flex;
-    gap: 15px;
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
 }
 
-.social-links a {
-    color: var(--muted);
-    font-size: 13px;
+.social-link {
+  border:1px solid var(--line);
+  padding:9px 13px;
+  border-radius:8px;
+  text-decoration:none;
+  font-size:13px;
+  color:var(--muted);
 }
 
-.social-links a:hover {
-    color: var(--accent);
+.social-link:hover {
+  color:var(--accent);
+  border-color:var(--accent);
+}
+
+/* TABLET RESPONSIVE */
+
+@media(max-width:850px) {
+
+  .navlinks {
+    gap:13px;
+  }
+
+  .navcta {
+    display:none;
+  }
+
+  .scriptbaker-box {
+    grid-template-columns:1fr;
+  }
+
+  .about-grid,
+  .service-grid,
+  .pricing-grid {
+    grid-template-columns:repeat(2,1fr);
+  }
+
 }
 
 /* MOBILE RESPONSIVE */
 
-@media(max-width: 800px) {
-    .contact-layout {
-        grid-template-columns: 1fr;
-    }
+@media(max-width:600px) {
 
-    .navcta {
-        display: none;
-    }
+  nav .wrap {
+    padding-top:13px;
+    padding-bottom:13px;
+    flex-wrap:wrap;
+  }
+
+  .navlinks {
+    width:100%;
+    justify-content:space-between;
+    gap:8px;
+  }
+
+  .navlinks a {
+    font-size:12px;
+  }
+
+  .hero {
+    min-height:520px;
+    background-position:center center;
+  }
+
+  .hero .wrap {
+    padding-top:65px;
+    padding-bottom:65px;
+  }
+
+  .hero p {
+    font-size:15px;
+  }
+
+  section {
+    padding:58px 0;
+  }
+
+  .about-grid,
+  .service-grid,
+  .pricing-grid {
+    grid-template-columns:1fr;
+  }
+
+  .service-icons {
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .scriptbaker-logo {
+    flex-wrap:wrap;
+  }
+
+  footer .wrap {
+    flex-direction:column;
+    text-align:center;
+  }
+
+  body::before {
+    background-position:center center;
+    opacity:.07;
+  }
+
 }
 
-@media(max-width: 580px) {
-    nav .wrap {
-        flex-wrap: wrap;
-        padding-top: 12px;
-        padding-bottom: 12px;
-    }
+@media(prefers-reduced-motion:reduce) {
+  html {
+    scroll-behavior:auto;
+  }
 
-    .navlinks {
-        width: 100%;
-        justify-content: space-between;
-        gap: 10px;
-    }
-
-    .navlinks a {
-        font-size: 12px;
-    }
-
-    .contact-form {
-        grid-template-columns: 1fr;
-    }
-
-    .field.full,
-    .submit-btn,
-    .form-note {
-        grid-column: 1;
-    }
-
-    .info-panel,
-    .form-panel {
-        padding: 22px;
-    }
-
-    footer .wrap {
-        flex-direction: column;
-        text-align: center;
-    }
+  * {
+    transition:none!important;
+  }
 }
+
 </style>
 </head>
 
@@ -350,225 +679,510 @@ footer small {
 <!-- NAVIGATION -->
 
 <nav>
-    <div class="wrap">
+  <div class="wrap">
 
-        <a class="brand" href="index.html">
-            Salik Tahir<span>.</span>
-        </a>
+    <a class="brand" href="index.html">
+      SALIK<span>.</span>
+    </a>
 
-        <div class="navlinks">
-            <a href="index.html">Home</a>
-            <a href="index.html#about">About</a>
-            <a href="services.html">Services</a>
-            <a href="contact.html" class="active">Contact</a>
-        </div>
-
-        <a href="#contact-form" class="navcta">
-            Let's Talk
-        </a>
-
+    <div class="navlinks">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#scriptbaker">Scriptbaker</a>
+      <a href="#services">Services</a>
+      <a href="#pricing">Pricing</a>
+      <a href="contact.html">Contact</a>
     </div>
+
+    <a class="navcta" href="contact.html">
+      Contact Me ↗
+    </a>
+
+  </div>
 </nav>
 
-<!-- HERO SECTION -->
+<main>
 
-<header class="hero">
-    <div class="kicker">Get In Touch</div>
+<!-- HOME HERO -->
 
-    <h1>Contact Salik Tahir</h1>
+<header class="hero" id="home">
 
-    <p>
-        Have a project in mind? Let's work together.
-        Send me your project details using the contact form below.
-    </p>
-</header>
+  <div class="wrap">
 
-<!-- CONTACT SECTION -->
+    <div class="hero-content">
 
-<section class="contact-section" id="contact-form">
+      <div class="eyebrow">
+        <span class="dot"></span>
+        Web • Mobile • AI • SEO
+      </div>
 
-    <div class="wrap contact-layout">
+      <h1>
+        Building Digital Ideas Into
+        <span>Real Solutions.</span>
+      </h1>
 
-        <!-- CONTACT INFORMATION -->
+      <p>
+        I'm Salik Tahir — a website developer creating modern
+        websites, mobile experiences, AI-powered solutions
+        and digital services that help people and businesses grow.
+      </p>
 
-        <div class="info-panel">
+      <div class="hero-actions">
 
-            <h2>Let's Connect</h2>
+        <a class="btn primary" href="#services">
+          Explore My Services
+        </a>
 
-            <p>
-                I provide professional digital solutions
-                for businesses, startups and individuals.
-                Contact me about your next project.
-            </p>
+        <a class="btn outline" href="contact.html">
+          Start a Project
+        </a>
 
-            <div class="info-item">
-                <strong>BRAND</strong>
-                <span>Salik Tahir — Scriptbaker</span>
-            </div>
+      </div>
 
-            <div class="info-item">
-                <strong>SERVICES</strong>
-                <span>Web Development, AI, Mobile Apps, SEO</span>
-            </div>
-
-            <div class="info-item">
-                <strong>INSTAGRAM</strong>
-                <span>
-                    <a href="https://www.instagram.com/saliktahir.pk/"
-                       target="_blank">
-                       @saliktahir.pk
-                    </a>
-                </span>
-            </div>
-
-            <div class="info-item">
-                <strong>TIKTOK</strong>
-                <span>
-                    <a href="https://www.tiktok.com/@salikraju123"
-                       target="_blank">
-                       @salikraju123
-                    </a>
-                </span>
-            </div>
-
-        </div>
-
-        <!-- CONTACT FORM -->
-
-        <div class="form-panel">
-
-            <h2>Send Me a Message</h2>
-
-            <p style="color:var(--muted);margin-bottom:22px;">
-                Fill in the details below to discuss your project.
-            </p>
-
-            <form
-                class="contact-form"
-                action="https://formsubmit.co/YOUR_EMAIL@example.com"
-                method="POST">
-
-                <input type="hidden"
-                       name="_subject"
-                       value="New Project Inquiry - Salik Tahir">
-
-                <input type="hidden"
-                       name="_template"
-                       value="table">
-
-                <div class="field">
-                    <label for="name">Your Name *</label>
-                    <input
-                        id="name"
-                        type="text"
-                        name="Name"
-                        placeholder="Enter your name"
-                        required>
-                </div>
-
-                <div class="field">
-                    <label for="email">Email Address *</label>
-                    <input
-                        id="email"
-                        type="email"
-                        name="Email"
-                        placeholder="Enter your email"
-                        required>
-                </div>
-
-                <div class="field">
-                    <label for="service">Service Required *</label>
-
-                    <select id="service" name="Service" required>
-                        <option value="">Select a service</option>
-                        <option>Website Development</option>
-                        <option>Mobile App Development</option>
-                        <option>AI Solutions</option>
-                        <option>Chatbot Development</option>
-                        <option>SEO Optimization</option>
-                        <option>E-commerce Development</option>
-                        <option>UI/UX Design</option>
-                        <option>Other IT Services</option>
-                    </select>
-                </div>
-
-                <div class="field">
-                    <label for="budget">Estimated Budget</label>
-
-                    <select id="budget" name="Budget">
-                        <option value="">Select budget</option>
-                        <option>Under $100</option>
-                        <option>$100 - $300</option>
-                        <option>$300 - $500</option>
-                        <option>$500+</option>
-                        <option>Not decided</option>
-                    </select>
-                </div>
-
-                <div class="field full">
-                    <label for="subject">Project Subject *</label>
-
-                    <input
-                        id="subject"
-                        type="text"
-                        name="Project Subject"
-                        placeholder="Enter project subject"
-                        required>
-                </div>
-
-                <div class="field full">
-                    <label for="message">Project Details *</label>
-
-                    <textarea
-                        id="message"
-                        name="Message"
-                        placeholder="Write your project details here..."
-                        required></textarea>
-                </div>
-
-                <p class="form-note">
-                    Please provide accurate details so I can
-                    understand your project requirements.
-                </p>
-
-                <button type="submit" class="submit-btn">
-                    Send Message →
-                </button>
-
-            </form>
-
-        </div>
+      <div class="hero-note">
+        Creative thinking · Clean development · Practical digital solutions
+      </div>
 
     </div>
 
+  </div>
+
+</header>
+
+<!-- SCRIPTBAKER -->
+
+<section class="scriptbaker" id="scriptbaker">
+
+  <div class="wrap scriptbaker-box">
+
+    <div class="scriptbaker-copy">
+
+      <div class="scriptbaker-logo">
+
+        <div class="logo-symbol">S</div>
+
+        <h2>
+          SCRIPT<span>BAKER</span>
+        </h2>
+
+      </div>
+
+      <div class="kicker">
+        Technology & Digital Services
+      </div>
+
+      <h3>
+        We build, scale and support your tech.
+      </h3>
+
+      <p>
+        Explore modern web development, mobile solutions,
+        artificial intelligence, search engine optimization
+        and more. Technology to help your ideas grow.
+      </p>
+
+      <div class="service-icons">
+
+        <a href="#web">
+          <span>💻</span>
+          <strong>WEB</strong>
+        </a>
+
+        <a href="#mobile">
+          <span>📱</span>
+          <strong>MOBILE</strong>
+        </a>
+
+        <a href="#ai">
+          <span>🤖</span>
+          <strong>AI</strong>
+        </a>
+
+        <a href="#seo">
+          <span>🚀</span>
+          <strong>SEO</strong>
+        </a>
+
+      </div>
+
+      <a href="#services" class="btn primary">
+        Explore All Services
+      </a>
+
+    </div>
+
+    <div>
+
+      <img
+        class="scriptbaker-image"
+        src="scriptbaker-background.png"
+        alt="Scriptbaker office and digital services banner">
+
+    </div>
+
+  </div>
+
 </section>
+
+<!-- ABOUT -->
+
+<section id="about">
+
+  <div class="wrap">
+
+    <div class="section-head">
+
+      <div class="kicker">A little about me</div>
+
+      <h2>About Salik Tahir</h2>
+
+      <p>A few things I enjoy and work on.</p>
+
+    </div>
+
+    <div class="about-grid">
+
+      <article class="info-card">
+
+        <div class="card-icon">🌐</div>
+
+        <h3>Website Developer</h3>
+
+        <p>
+          I enjoy creating websites, working with HTML and CSS,
+          and building modern web experiences.
+        </p>
+
+        <span class="tag">Development</span>
+
+      </article>
+
+      <article class="info-card">
+
+        <div class="card-icon">🎮</div>
+
+        <h3>Gaming</h3>
+
+        <p>
+          I enjoy playing games in my free time and
+          exploring different gaming experiences.
+        </p>
+
+        <span class="tag">Games</span>
+
+      </article>
+
+      <article class="info-card">
+
+        <div class="card-icon">🍔</div>
+
+        <h3>Food Lover</h3>
+
+        <p>
+          I love eating food and trying different dishes,
+          flavors and cuisines.
+        </p>
+
+        <span class="tag">Food</span>
+
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- SERVICES -->
+
+<section class="services-section" id="services">
+
+  <div class="wrap">
+
+    <div class="section-head">
+
+      <div class="kicker">What I can help with</div>
+
+      <h2>Our Services</h2>
+
+      <p>
+        Modern digital services for personal brands,
+        businesses and new ideas.
+      </p>
+
+    </div>
+
+    <div class="service-grid">
+
+      <article class="service-card" id="web">
+        <div class="card-icon">💻</div>
+        <h3>Website Development</h3>
+        <p>
+          Modern, responsive and professional websites
+          for personal brands and businesses.
+        </p>
+        <a class="card-link" href="contact.html">Get Started →</a>
+      </article>
+
+      <article class="service-card" id="mobile">
+        <div class="card-icon">📱</div>
+        <h3>Mobile Development</h3>
+        <p>
+          Mobile-friendly websites and modern app
+          experiences for different devices.
+        </p>
+        <a class="card-link" href="contact.html">Get Started →</a>
+      </article>
+
+      <article class="service-card" id="ai">
+        <div class="card-icon">🤖</div>
+        <h3>AI Solutions</h3>
+        <p>
+          AI tools, chatbot integration and intelligent
+          workflows for everyday tasks.
+        </p>
+        <a class="card-link" href="contact.html">Get Started →</a>
+      </article>
+
+      <article class="service-card" id="seo">
+        <div class="card-icon">🚀</div>
+        <h3>SEO Optimization</h3>
+        <p>
+          Improve website structure, metadata,
+          search visibility and on-page SEO.
+        </p>
+        <a class="card-link" href="contact.html">Get Started →</a>
+      </article>
+
+      <article class="service-card">
+        <div class="card-icon">🎨</div>
+        <h3>UI / UX & Web Design</h3>
+        <p>
+          Clean interfaces, attractive layouts and
+          user-friendly website experiences.
+        </p>
+        <a class="card-link" href="contact.html">Get Started →</a>
+      </article>
+
+      <article class="service-card">
+        <div class="card-icon">🛒</div>
+        <h3>E-commerce Websites</h3>
+        <p>
+          Online stores, product pages and practical
+          shopping website experiences.
+        </p>
+        <a class="card-link" href="contact.html">Get Started →</a>
+      </article>
+
+      <article class="service-card">
+        <div class="card-icon">⚙️</div>
+        <h3>Website Maintenance</h3>
+        <p>
+          Content updates, fixes, improvements and
+          ongoing website support.
+        </p>
+        <a class="card-link" href="contact.html">Get Started →</a>
+      </article>
+
+      <article class="service-card">
+        <div class="card-icon">🔗</div>
+        <h3>API Integration</h3>
+        <p>
+          Connect websites and digital services
+          with useful third-party APIs.
+        </p>
+        <a class="card-link" href="contact.html">Get Started →</a>
+      </article>
+
+      <article class="service-card">
+        <div class="card-icon">☁️</div>
+        <h3>Hosting & Deployment</h3>
+        <p>
+          Help with domains, hosting, GitHub,
+          Netlify and website deployment.
+        </p>
+        <a class="card-link" href="contact.html">Get Started →</a>
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- PRICING -->
+
+<section id="pricing">
+
+  <div class="wrap">
+
+    <div class="section-head">
+
+      <div class="kicker">Flexible options</div>
+
+      <h2>Website Packages</h2>
+
+      <p>
+        Example packages for different website needs.
+        Final cost depends on project requirements.
+      </p>
+
+    </div>
+
+    <div class="pricing-grid">
+
+      <article class="pricing-card">
+
+        <h3>Starter</h3>
+
+        <div class="price">Rs. 15,000</div>
+
+        <p>
+          One-page professional website with
+          responsive design and essential sections.
+        </p>
+
+        <a href="contact.html" class="card-link">
+          Choose Package →
+        </a>
+
+      </article>
+
+      <article class="pricing-card featured">
+
+        <h3>Business</h3>
+
+        <div class="price">Rs. 30,000</div>
+
+        <p>
+          Multi-section business website with
+          services, about, and contact information.
+        </p>
+
+        <a href="contact.html" class="card-link">
+          Choose Package →
+        </a>
+
+      </article>
+
+      <article class="pricing-card">
+
+        <h3>Custom</h3>
+
+        <div class="price">Let's Talk</div>
+
+        <p>
+          A custom website planned around
+          your business goals and requirements.
+        </p>
+
+        <a href="contact.html" class="card-link">
+          Contact Me →
+        </a>
+
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- STATS -->
+
+<div class="stats">
+
+  <div class="wrap">
+
+    <div>
+      <div class="stat-num">4</div>
+      <div class="stat-label">Core Digital Areas</div>
+    </div>
+
+    <div>
+      <div class="stat-num">9+</div>
+      <div class="stat-label">Service Categories</div>
+    </div>
+
+    <div>
+      <div class="stat-num">24/7</div>
+      <div class="stat-label">Website Availability</div>
+    </div>
+
+  </div>
+
+</div>
+
+<!-- CONTACT -->
+
+<section id="contact">
+
+  <div class="wrap">
+
+    <div class="contact-box">
+
+      <div class="kicker">Have a project in mind?</div>
+
+      <h2>Let's Build Something Great!</h2>
+
+      <p>
+        Tell me about your idea, website or digital project.
+        Let's discuss how to bring it to life.
+      </p>
+
+      <a href="contact.html" class="btn primary">
+        Open Contact Page →
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+</main>
 
 <!-- FOOTER -->
 
 <footer>
-    <div class="wrap">
 
-        <a class="brand" href="index.html">
-            SALIKTAHIR<span>.</span>
-        </a>
+  <div class="wrap">
 
-        <div class="social-links">
-            <a href="https://www.tiktok.com/@salikraju123"
-               target="_blank">TikTok</a>
+    <a class="brand" href="index.html">
+      SALIK<span>.</span>
+    </a>
 
-            <a href="https://www.facebook.com/profile.php?id=61584913797671"
-               target="_blank">Facebook</a>
+    <div class="social-links">
 
-            <a href="https://www.instagram.com/saliktahir.pk/"
-               target="_blank">Instagram</a>
-        </div>
+      <a class="social-link"
+         href="https://www.tiktok.com/@salikraju123"
+         target="_blank"
+         rel="noopener noreferrer">TikTok</a>
 
-        <small>
-            © 2026 Salik Tahir. All Rights Reserved.
-        </small>
+      <a class="social-link"
+         href="https://www.facebook.com/profile.php?id=61584913797671"
+         target="_blank"
+         rel="noopener noreferrer">Facebook</a>
+
+      <a class="social-link"
+         href="https://www.instagram.com/saliktahir.pk/"
+         target="_blank"
+         rel="noopener noreferrer">Instagram</a>
 
     </div>
+
+    <small>
+      © <span id="year"></span> Salik Tahir. All rights reserved.
+    </small>
+
+  </div>
+
 </footer>
+
+<script>
+document.getElementById("year").textContent =
+    new Date().getFullYear();
+</script>
 
 </body>
 </html>
