@@ -1,898 +1,1053 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Salik Tahir | Scriptbaker — Web, Mobile, AI & SEO</title>
-
-<meta name="description" content="Salik Tahir and Scriptbaker. Professional Web Development, Mobile Development, Artificial Intelligence and SEO services.">
-<meta name="keywords" content="Salik Tahir, Scriptbaker, Web Development, Mobile Development, AI, SEO">
-<meta name="author" content="Salik Tahir">
-<meta name="robots" content="index, follow">
-<meta name="theme-color" content="#0F1417">
-
-<meta property="og:title" content="Salik Tahir | Scriptbaker">
-<meta property="og:description" content="Web, Mobile, AI and SEO Services">
-<meta property="og:type" content="website">
-<meta property="og:image" content="Web%20Development%20Neon%20Code%20Banner.png">
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-<style>
-
-:root {
---bg:#0F1417;
---soft:#161C21;
---card:#1B2227;
---line:rgba(255,255,255,.08);
---text:#EDF1F3;
---muted:#9BA7AD;
---accent:#5EE6C1;
---gold:#F2B84B;
-}
-
-* {
-box-sizing:border-box;
-margin:0;
-padding:0;
-}
-
-html {
-scroll-behavior:smooth;
-scroll-padding-top:90px;
-}
-
-body {
-position:relative;
-isolation:isolate;
-background:var(--bg);
-color:var(--text);
-font-family:Inter,sans-serif;
-line-height:1.6;
-}
-
-/* BACKGROUND IMAGE */
-
-body::before {
-content:"";
-position:fixed;
-inset:0;
-z-index:-1;
-pointer-events:none;
-background-image:url("Web%20Development%20Neon%20Code%20Banner.png");
-background-repeat:no-repeat;
-background-position:center center;
-background-size:min(1000px, 88vw) auto;
-opacity:0.13;
-}
-
-h1,h2,h3 {
-font-family:"Space Grotesk",sans-serif;
-}
-
-a {
-color:inherit;
-}
-
-.wrap {
-max-width:1140px;
-margin:auto;
-padding:0 25px;
-}
-
-/* NAVIGATION */
-
-nav {
-position:sticky;
-top:0;
-z-index:100;
-background:rgba(15,20,23,.96);
-backdrop-filter:blur(12px);
-border-bottom:1px solid var(--line);
-}
-
-nav .wrap {
-min-height:75px;
-display:flex;
-align-items:center;
-justify-content:space-between;
-gap:20px;
-}
-
-.brand {
-font:700 23px "Space Grotesk",sans-serif;
-text-decoration:none;
-}
-
-.brand span {
-color:var(--accent);
-}
-
-.navlinks {
-display:flex;
-gap:25px;
-}
-
-.navlinks a {
-color:var(--muted);
-font-size:14px;
-text-decoration:none;
-transition:.2s;
-}
-
-.navlinks a:hover {
-color:var(--accent);
-}
-
-.navcta,.btn {
-display:inline-block;
-padding:12px 20px;
-border-radius:7px;
-text-decoration:none;
-font-weight:600;
-transition:.25s;
-}
-
-.navcta,.primary {
-background:var(--accent);
-color:#0F1417;
-}
-
-.navcta:hover,.primary:hover {
-background:#fff;
-transform:translateY(-2px);
-}
-
-/* HERO */
-
-.hero {
-text-align:center;
-padding:75px 0 65px;
-}
-
-.hero-photo {
-width:150px;
-height:150px;
-object-fit:cover;
-border-radius:50%;
-border:3px solid var(--accent);
-margin-bottom:25px;
-}
-
-.kicker {
-color:var(--accent);
-letter-spacing:2px;
-text-transform:uppercase;
-font-size:13px;
-}
-
-.hero h1 {
-font-size:clamp(36px,6vw,58px);
-margin:18px 0;
-line-height:1.15;
-}
-
-.hero p {
-color:var(--muted);
-max-width:650px;
-margin:0 auto 25px;
-}
-
-.btn {
-margin:5px;
-}
-
-.outline {
-border:1px solid var(--line);
-}
-
-.outline:hover {
-border-color:var(--accent);
-color:var(--accent);
-}
-
-/* SCRIPTBAKER */
-
-.scriptbaker {
-padding:70px 0;
-background:rgba(22,28,33,.85);
-border-block:1px solid var(--line);
-}
-
-.scriptbaker-box {
-display:grid;
-grid-template-columns:1.1fr .9fr;
-gap:40px;
-align-items:center;
-}
-
-.scriptbaker-logo {
-display:inline-flex;
-align-items:center;
-gap:12px;
-margin-bottom:20px;
-}
-
-.logo-symbol {
-width:55px;
-height:55px;
-display:grid;
-place-items:center;
-border-radius:50%;
-background:white;
-color:#177BC0;
-font-size:30px;
-font-weight:700;
-}
-
-.scriptbaker h2 {
-font-size:clamp(30px,5vw,46px);
-letter-spacing:1px;
-}
-
-.scriptbaker h2 span {
-color:var(--accent);
-}
-
-.scriptbaker-description {
-color:var(--muted);
-margin:15px 0 25px;
-}
-
-.scriptbaker-image {
-width:100%;
-border-radius:14px;
-border:1px solid var(--line);
-display:block;
-object-fit:cover;
-box-shadow:0 15px 45px rgba(0,0,0,.3);
-}
-
-.service-icons {
-display:grid;
-grid-template-columns:repeat(4,1fr);
-gap:12px;
-margin-top:25px;
-}
-
-.service-icons a {
-text-decoration:none;
-text-align:center;
-background:var(--card);
-border:1px solid var(--line);
-border-radius:10px;
-padding:16px 5px;
-transition:.2s;
-}
-
-.service-icons a:hover {
-border-color:var(--accent);
-transform:translateY(-4px);
-}
-
-.service-icons span {
-display:block;
-font-size:25px;
-margin-bottom:6px;
-}
-
-.service-icons strong {
-font-size:13px;
-letter-spacing:1px;
-}
-
-/* SECTIONS */
-
-section {
-padding:70px 0;
-}
-
-.section-head {
-text-align:center;
-margin-bottom:40px;
-}
-
-.section-head h2 {
-font-size:34px;
-margin-bottom:10px;
-}
-
-.section-head p {
-color:var(--muted);
-}
-
-/* SERVICE CARDS */
-
-.tool-grid,.pricing-grid {
-display:grid;
-grid-template-columns:repeat(3,minmax(0,1fr));
-gap:20px;
-}
-
-.tool-card,.pricing-card {
-padding:27px;
-background:rgba(27,34,39,.90);
-border:1px solid var(--line);
-border-radius:12px;
-transition:.25s;
-}
-
-.tool-card:hover,.pricing-card:hover {
-transform:translateY(-5px);
-border-color:var(--accent);
-}
-
-.tool-icon {
-font-size:32px;
-margin-bottom:15px;
-}
-
-.tool-card h3,.pricing-card h3 {
-margin:8px 0;
-}
-
-.tool-card p,.pricing-card p {
-color:var(--muted);
-line-height:1.7;
-font-size:14px;
-}
-
-.tool-tag {
-display:inline-block;
-color:var(--accent);
-border:1px solid rgba(94,230,193,.3);
-padding:4px 10px;
-border-radius:20px;
-font-size:12px;
-margin-top:15px;
-}
-
-.card-link {
-display:inline-block;
-margin-top:18px;
-color:var(--accent);
-font-size:14px;
-font-weight:600;
-text-decoration:none;
-}
-
-/* PRICING */
-
-.pricing-card {
-background:rgba(16,24,26,.92);
-}
-
-.price {
-color:var(--accent);
-font:700 28px "Space Grotesk",sans-serif;
-margin:18px 0;
-}
-
-/* STATS */
-
-.stats {
-background:rgba(22,28,33,.90);
-border-block:1px solid var(--line);
-padding:35px 0;
-}
-
-.stats .wrap {
-display:flex;
-justify-content:space-around;
-gap:25px;
-flex-wrap:wrap;
-text-align:center;
-}
-
-.stat-num {
-font:700 34px "Space Grotesk",sans-serif;
-color:var(--gold);
-}
-
-.stat-label {
-color:var(--muted);
-font-size:14px;
-}
-
-/* CONTACT */
-
-.contact-box {
-padding:40px;
-background:rgba(27,34,39,.92);
-border:1px solid var(--line);
-border-radius:15px;
-text-align:center;
-}
-
-.contact-box h2 {
-margin-bottom:12px;
-}
-
-.contact-box p {
-color:var(--muted);
-margin-bottom:20px;
-}
-
-/* FOOTER */
-
-footer {
-border-top:1px solid var(--line);
-padding:28px 0;
-background:rgba(15,20,23,.90);
-}
-
-footer .wrap {
-display:flex;
-align-items:center;
-justify-content:space-between;
-gap:20px;
-flex-wrap:wrap;
-}
-
-footer small {
-color:var(--muted);
-}
-
-.social-links {
-display:flex;
-gap:10px;
-flex-wrap:wrap;
-}
-
-.social-link {
-border:1px solid var(--line);
-padding:10px 13px;
-border-radius:8px;
-text-decoration:none;
-font-size:13px;
-}
-
-.social-link:hover {
-color:var(--accent);
-border-color:var(--accent);
-}
-
-/* MOBILE RESPONSIVE */
-
-@media(max-width:800px) {
-
-.tool-grid,.pricing-grid {
-grid-template-columns:repeat(2,1fr);
-}
-
-.scriptbaker-box {
-grid-template-columns:1fr;
-}
-
-.navlinks {
-gap:12px;
-}
-
-.navcta {
-display:none;
-}
-
-}
-
-@media(max-width:580px) {
-
-nav .wrap {
-padding-top:14px;
-padding-bottom:14px;
-flex-wrap:wrap;
-}
-
-.navlinks {
-width:100%;
-justify-content:space-between;
-}
-
-.navlinks a {
-font-size:12px;
-}
-
-.tool-grid,.pricing-grid {
-grid-template-columns:1fr;
-}
-
-.hero {
-padding:55px 0;
-}
-
-.hero-photo {
-width:125px;
-height:125px;
-}
-
-.service-icons {
-grid-template-columns:repeat(2,1fr);
-}
-
-.contact-box {
-padding:25px;
-}
-
-footer .wrap {
-flex-direction:column;
-text-align:center;
-}
-
-body::before {
-background-size:115vw auto;
-opacity:0.10;
-}
-
-}
-
-@media(prefers-reduced-motion:reduce) {
-html {
-scroll-behavior:auto;
-}
-* {
-transition:none!important;
-}
-}
-
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Salik Tahir — Web Development, Mobile Apps, AI Solutions, SEO and IT Services.">
+  <meta name="theme-color" content="#0F1417">
+  <title>Salik Tahir | Web, Mobile, AI & SEO Developer</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #0F1417;
+      --soft: #161C21;
+      --card: #1B2227;
+      --line: rgba(255,255,255,.09);
+      --text: #EDF1F3;
+      --muted: #9BA7AD;
+      --accent: #5EE6C1;
+      --gold: #F2B84B;
+      --max: 1160px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 88px;
+    }
+
+    body {
+      font-family: Inter, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button, input, select, textarea {
+      font: inherit;
+    }
+
+    .container {
+      width: min(var(--max), 90%);
+      margin: auto;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(15,20,23,.94);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .nav {
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 22px;
+    }
+
+    .logo {
+      font: 700 23px "Space Grotesk", sans-serif;
+      letter-spacing: -1px;
+    }
+
+    .logo span {
+      color: var(--accent);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+      flex-wrap: wrap;
+    }
+
+    .nav-links a {
+      font-size: 13px;
+      color: var(--muted);
+      font-weight: 600;
+      transition: .2s;
+    }
+
+    .nav-links a:hover {
+      color: var(--accent);
+    }
+
+    .nav-cta, .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid var(--accent);
+      background: var(--accent);
+      color: #071410;
+      padding: 12px 19px;
+      border-radius: 8px;
+      font-weight: 800;
+      font-size: 13px;
+      transition: .2s;
+      cursor: pointer;
+    }
+
+    .nav-cta:hover, .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 28px rgba(94,230,193,.16);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--text);
+      border-color: var(--line);
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 105px 0 95px;
+      background:
+        radial-gradient(ellipse at 80% 20%,rgba(94,230,193,.13),transparent 35%),
+        linear-gradient(120deg,rgba(15,20,23,.97),rgba(15,20,23,.88)),
+        url("Web Development Neon Code Banner.png") center/cover;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      gap: 9px;
+      align-items: center;
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+
+    .dot {
+      width: 8px;
+      height: 8px;
+      background: var(--accent);
+      border-radius: 50%;
+      box-shadow: 0 0 14px var(--accent);
+    }
+
+    h1, h2, h3 {
+      font-family: "Space Grotesk", sans-serif;
+      line-height: 1.15;
+      letter-spacing: -.7px;
+    }
+
+    h1 {
+      font-size: clamp(42px,7vw,76px);
+      max-width: 800px;
+      margin-bottom: 22px;
+    }
+
+    h1 span, .gradient {
+      color: var(--accent);
+    }
+
+    .hero p {
+      max-width: 650px;
+      color: var(--muted);
+      font-size: 17px;
+      margin-bottom: 30px;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 13px;
+      flex-wrap: wrap;
+    }
+
+    .hero-note {
+      margin-top: 34px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .section {
+      padding: 82px 0;
+    }
+
+    .section-alt {
+      background: var(--soft);
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .section-head {
+      max-width: 720px;
+      margin-bottom: 36px;
+    }
+
+    .section-head h2 {
+      font-size: clamp(30px,4vw,45px);
+      margin: 8px 0 13px;
+    }
+
+    .section-head p {
+      color: var(--muted);
+    }
+
+    .kicker {
+      color: var(--accent);
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1.15fr .85fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .about-copy p {
+      color: var(--muted);
+      margin: 0 0 15px;
+    }
+
+    .about-panel {
+      background: linear-gradient(145deg,#202a2e,#151c20);
+      border: 1px solid var(--line);
+      padding: 30px;
+      border-radius: 16px;
+    }
+
+    .about-panel h3 {
+      font-size: 22px;
+      margin-bottom: 14px;
+    }
+
+    .tag-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+      margin-top: 20px;
+    }
+
+    .tag {
+      font-size: 12px;
+      color: var(--accent);
+      border: 1px solid rgba(94,230,193,.25);
+      background: rgba(94,230,193,.06);
+      padding: 7px 11px;
+      border-radius: 99px;
+    }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      gap: 16px;
+    }
+
+    .service-card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 13px;
+      padding: 23px;
+      transition: .22s;
+    }
+
+    .service-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(94,230,193,.45);
+    }
+
+    .service-icon {
+      width: 43px;
+      height: 43px;
+      display: grid;
+      place-items: center;
+      border-radius: 11px;
+      background: rgba(94,230,193,.1);
+      color: var(--accent);
+      font-size: 21px;
+      margin-bottom: 17px;
+    }
+
+    .service-card h3 {
+      font-size: 18px;
+      margin-bottom: 9px;
+    }
+
+    .service-card p {
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .service-card ul {
+      margin: 13px 0 0 17px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .service-card li {
+      margin: 4px 0;
+    }
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      gap: 17px;
+    }
+
+    .why-card {
+      padding: 23px;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: rgba(255,255,255,.025);
+    }
+
+    .why-card h3 {
+      font-size: 17px;
+      margin-bottom: 8px;
+    }
+
+    .why-card p {
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: .8fr 1.2fr;
+      gap: 35px;
+      align-items: start;
+    }
+
+    .contact-info {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 27px;
+    }
+
+    .contact-info h3 {
+      font-size: 22px;
+      margin-bottom: 12px;
+    }
+
+    .contact-info p {
+      color: var(--muted);
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+
+    .contact-link {
+      display: block;
+      color: var(--accent);
+      font-size: 14px;
+      margin: 12px 0;
+      overflow-wrap: anywhere;
+    }
+
+    .contact-form {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 28px;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+    }
+
+    .field {
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+      margin-bottom: 15px;
+    }
+
+    .field.full {
+      grid-column: 1/-1;
+    }
+
+    label {
+      font-size: 12px;
+      font-weight: 700;
+      color: #dce5e7;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      background: #11181c;
+      color: var(--text);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 13px 14px;
+      outline: none;
+    }
+
+    input:focus, select:focus, textarea:focus {
+      border-color: var(--accent);
+    }
+
+    textarea {
+      min-height: 145px;
+      resize: vertical;
+    }
+
+    .form-hint {
+      font-size: 11px;
+      color: var(--muted);
+      margin-top: 12px;
+    }
+
+    .footer {
+      padding: 30px 0;
+      border-top: 1px solid var(--line);
+      background: #0b1012;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .footer p {
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .socials {
+      display: flex;
+      gap: 17px;
+      flex-wrap: wrap;
+    }
+
+    .socials a {
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .socials a:hover {
+      color: var(--accent);
+    }
+
+    @media(max-width:850px) {
+      .about-grid, .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .service-grid {
+        grid-template-columns: repeat(2,1fr);
+      }
+
+      .why-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media(max-width:620px) {
+      .nav {
+        padding: 14px 0;
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .nav-links {
+        gap: 13px;
+      }
+
+      .nav-cta {
+        display: none;
+      }
+
+      .hero {
+        padding: 76px 0;
+      }
+
+      .section {
+        padding: 62px 0;
+      }
+
+      .service-grid, .why-grid, .form-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .field.full {
+        grid-column: auto;
+      }
+
+      .contact-form, .contact-info {
+        padding: 20px;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<!-- NAVIGATION -->
-
-<nav>
-<div class="wrap">
-
-<a class="brand" href="index.html">
-Salik Tahir<span>.</span>
-</a>
-
-<div class="navlinks">
-<a href="#about">About</a>
-<a href="#scriptbaker">Services</a>
-<a href="#pricing">Pricing</a>
-<a href="contact.html">Contact</a>
-</div>
-
-<a class="navcta" href="contact.html">Contact Me</a>
-
-</div>
-</nav>
-
-<!-- HERO -->
-
-<header class="hero">
-<div class="wrap">
-
-<img class="hero-photo"
-src="WhatsApp Image 2026-10-26 at 8.58.28 PM.jpeg"
-alt="Salik Tahir">
-
-<div class="kicker">Personal Website</div>
-
-<h1>Welcome to Salik Tahir</h1>
-
-<p>
-I'm Salik Tahir, a website developer who enjoys coding,
-playing games, technology and discovering great food.
-</p>
-
-<a class="btn primary" href="#scriptbaker">Explore Services</a>
-
-<a class="btn outline" href="contact.html">Get in Touch</a>
-
-</div>
-</header>
-
-<!-- SCRIPTBAKER SECTION -->
-
-<section class="scriptbaker" id="scriptbaker">
-<div class="wrap">
-
-<div class="scriptbaker-box">
-
-<div>
-
-<div class="scriptbaker-logo">
-<div class="logo-symbol">S</div>
-<h2>SCRIPT<span>BAKER</span></h2>
-</div>
-
-<div class="kicker">Technology & Digital Services</div>
-
-<h2>We build, scale and support your tech.</h2>
-
-<p class="scriptbaker-description">
-Explore modern web development, mobile solutions,
-artificial intelligence and search engine optimization.
-Technology to help your ideas grow.
-</p>
-
-<div class="service-icons">
-
-<a href="#web">
-<span>💻</span>
-<strong>WEB</strong>
-</a>
-
-<a href="#mobile">
-<span>📱</span>
-<strong>MOBILE</strong>
-</a>
-
-<a href="#ai">
-<span>🤖</span>
-<strong>AI</strong>
-</a>
-
-<a href="#seo">
-<span>🚀</span>
-<strong>SEO</strong>
-</a>
-
-</div>
-
-<br>
-
-<a href="#services" class="btn primary">Explore All Services</a>
-
-</div>
-
-<div>
-<img class="scriptbaker-image"
-src="scriptbaker-office.png"
-alt="Scriptbaker Web, Mobile, AI and SEO banner"
-loading="lazy">
-</div>
-
-</div>
-</div>
-</section>
-
-<!-- ABOUT -->
-
-<section id="about">
-<div class="wrap">
-
-<div class="section-head">
-<h2>About Me</h2>
-<p>A few things I enjoy and work on.</p>
-</div>
-
-<div class="tool-grid">
-
-<article class="tool-card">
-<div class="tool-icon">🌐</div>
-<h3>Website Developer</h3>
-<p>
-I enjoy creating websites, working with HTML and CSS,
-and building modern web experiences.
-</p>
-<span class="tool-tag">Development</span>
-</article>
-
-<article class="tool-card">
-<div class="tool-icon">🎮</div>
-<h3>Gaming</h3>
-<p>
-I enjoy playing games in my free time and
-exploring different gaming experiences.
-</p>
-<span class="tool-tag">Games</span>
-</article>
-
-<article class="tool-card">
-<div class="tool-icon">🍔</div>
-<h3>Food Lover</h3>
-<p>
-I love eating food and trying different dishes,
-flavors and cuisines.
-</p>
-<span class="tool-tag">Food</span>
-</article>
-
-</div>
-</div>
-</section>
-
-<!-- SERVICES -->
-
-<section id="services">
-<div class="wrap">
-
-<div class="section-head">
-<h2>Our Services</h2>
-<p>Web, Mobile, AI and SEO solutions.</p>
-</div>
-
-<div class="tool-grid">
-
-<article class="tool-card" id="web">
-<div class="tool-icon">💻</div>
-<h3>Web Development</h3>
-<p>
-Modern, responsive and professional websites
-for personal brands and businesses.
-</p>
-<span class="tool-tag">WEB</span>
-<a href="contact.html" class="card-link">Get Started →</a>
-</article>
-
-<article class="tool-card" id="mobile">
-<div class="tool-icon">📱</div>
-<h3>Mobile Development</h3>
-<p>
-Mobile-friendly digital experiences
-and modern mobile solutions.
-</p>
-<span class="tool-tag">MOBILE</span>
-<a href="contact.html" class="card-link">Get Started →</a>
-</article>
-
-<article class="tool-card" id="ai">
-<div class="tool-icon">🤖</div>
-<h3>Artificial Intelligence</h3>
-<p>
-Explore AI tools, intelligent technology
-and AI-powered digital solutions.
-</p>
-<span class="tool-tag">AI</span>
-<a href="contact.html" class="card-link">Get Started →</a>
-</article>
-
-<article class="tool-card" id="seo">
-<div class="tool-icon">🚀</div>
-<h3>SEO Optimization</h3>
-<p>
-Improve website structure, search visibility,
-metadata and search engine performance.
-</p>
-<span class="tool-tag">SEO</span>
-<a href="contact.html" class="card-link">Get Started →</a>
-</article>
-
-<article class="tool-card">
-<div class="tool-icon">🎨</div>
-<h3>Web Design</h3>
-<p>
-Beautiful layouts, clean interfaces
-and modern website designs.
-</p>
-<span class="tool-tag">DESIGN</span>
-<a href="contact.html" class="card-link">Get Started →</a>
-</article>
-
-<article class="tool-card">
-<div class="tool-icon">⚙️</div>
-<h3>Digital Solutions</h3>
-<p>
-Creative technology solutions
-for different digital needs.
-</p>
-<span class="tool-tag">TECHNOLOGY</span>
-<a href="contact.html" class="card-link">Get Started →</a>
-</article>
-
-</div>
-</div>
-</section>
-
-<!-- PRICING -->
-
-<section id="pricing">
-<div class="wrap">
-
-<div class="section-head">
-<h2>Website Packages</h2>
-<p>Simple packages for different website needs.</p>
-</div>
-
-<div class="pricing-grid">
-
-<article class="pricing-card">
-<h3>Starter</h3>
-<div class="price">Rs. 15,000</div>
-<p>1-page professional website with responsive design.</p>
-<a href="contact.html" class="card-link">Choose Package →</a>
-</article>
-
-<article class="pricing-card">
-<h3>Business</h3>
-<div class="price">Rs. 30,000</div>
-<p>Multi-page website with services, about and contact pages.</p>
-<a href="contact.html" class="card-link">Choose Package →</a>
-</article>
-
-<article class="pricing-card">
-<h3>Custom</h3>
-<div class="price">Let's Talk</div>
-<p>Custom website according to your business requirements.</p>
-<a href="contact.html" class="card-link">Contact Me →</a>
-</article>
-
-</div>
-</div>
-</section>
-
-<!-- STATS -->
-
-<div class="stats">
-<div class="wrap">
-
-<div>
-<div class="stat-num">30+</div>
-<div class="stat-label">Typing Speed</div>
-</div>
-
-<div>
-<div class="stat-num">4</div>
-<div class="stat-label">Main Services</div>
-</div>
-
-<div>
-<div class="stat-num">24/7</div>
-<div class="stat-label">Online Access</div>
-</div>
-
-</div>
-</div>
-
-<!-- CONTACT -->
-
-<section id="contact">
-<div class="wrap">
-
-<div class="contact-box">
-
-<h2>Let's Build Something Great!</h2>
-
-<p>
-Have a project or a question?
-Let's discuss your next digital idea.
-</p>
-
-<a href="contact.html" class="btn primary">
-Open Contact Page →
-</a>
-
-</div>
-</div>
-</section>
-
-<!-- FOOTER -->
-
-<footer>
-<div class="wrap">
-
-<a class="brand" href="index.html">
-SALIKTAHIR<span>.</span>
-</a>
-
-<div class="social-links">
-
-<a class="social-link"
-href="https://www.tiktok.com/@salikraju123"
-target="_blank" rel="noopener noreferrer">TikTok</a>
-
-<a class="social-link"
-href="https://www.facebook.com/profile.php?id=61584913797671"
-target="_blank" rel="noopener noreferrer">Facebook</a>
-
-<a class="social-link"
-href="https://www.instagram.com/saliktahir.pk/"
-target="_blank" rel="noopener noreferrer">Instagram</a>
-
-</div>
-
-<small>© 2026 Salik Tahir. All rights reserved.</small>
-
-</div>
-</footer>
+  <!-- HEADER / NAVIGATION -->
+  <header class="site-header">
+    <div class="container nav">
+      <a class="logo" href="#home">SALIK<span>.</span></a>
+
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#why-us">Why Me</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <a class="nav-cta" href="#contact">Let's Talk ↗</a>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- HOME PAGE -->
+    <section class="hero" id="home">
+      <div class="container">
+        <div class="eyebrow">
+          <span class="dot"></span>
+          Web • Mobile • AI • SEO
+        </div>
+
+        <h1>
+          Building Digital Ideas Into
+          <span>Real Solutions.</span>
+        </h1>
+
+        <p>
+          I'm Salik Tahir — a web developer creating modern websites,
+          mobile experiences, AI-powered solutions and digital services
+          that help people and businesses grow.
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn" href="#services">Explore My Services</a>
+          <a class="btn btn-outline" href="#contact">Start a Project</a>
+        </div>
+
+        <div class="hero-note">
+          Creative thinking · Clean development · Practical digital solutions
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT PAGE -->
+    <section class="section" id="about">
+      <div class="container about-grid">
+
+        <div class="about-copy">
+          <div class="kicker">About me</div>
+
+          <h2 style="font:700 clamp(30px,4vw,45px) 'Space Grotesk';margin:10px 0 18px">
+            Hi, I'm Salik Tahir.
+          </h2>
+
+          <p>
+            I enjoy turning ideas into useful digital experiences.
+            My focus is on responsive websites, modern interfaces,
+            mobile development, AI tools and search engine optimization.
+          </p>
+
+          <p>
+            Whether you need a business website, an online store,
+            an app, or help improving your online presence, explore
+            the services below and send me your project details.
+          </p>
+
+          <div class="tag-list">
+            <span class="tag">Website Developer</span>
+            <span class="tag">AI Enthusiast</span>
+            <span class="tag">Gaming</span>
+            <span class="tag">Food Lover</span>
+          </div>
+        </div>
+
+        <div class="about-panel">
+          <h3>What I aim to deliver</h3>
+
+          <p style="color:var(--muted);font-size:14px">
+            A professional online presence with thoughtful design,
+            responsive layouts and helpful features.
+          </p>
+
+          <div class="tag-list">
+            <span class="tag">Modern Design</span>
+            <span class="tag">Mobile Friendly</span>
+            <span class="tag">User Focused</span>
+            <span class="tag">Clean Code</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SERVICES PAGE -->
+    <section class="section section-alt" id="services">
+      <div class="container">
+
+        <div class="section-head">
+          <div class="kicker">What I do</div>
+
+          <h2>
+            My <span class="gradient">IT & Digital Services</span>
+          </h2>
+
+          <p>
+            Explore a range of services for individuals, startups and
+            businesses. Tell me what you want to build and we can discuss
+            the right solution.
+          </p>
+        </div>
+
+        <div class="service-grid">
+
+          <article class="service-card">
+            <div class="service-icon">⌘</div>
+            <h3>Website Development</h3>
+            <p>Modern, responsive websites designed for your brand and audience.</p>
+            <ul>
+              <li>Business & portfolio websites</li>
+              <li>Landing pages</li>
+              <li>Multi-page websites</li>
+              <li>Website redesign</li>
+            </ul>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon">▣</div>
+            <h3>Mobile App Development</h3>
+            <p>Mobile-first experiences and app solutions for your ideas.</p>
+            <ul>
+              <li>Android app concepts</li>
+              <li>App UI development</li>
+              <li>Business & utility apps</li>
+              <li>App testing support</li>
+            </ul>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon">✧</div>
+            <h3>AI Solutions & Integration</h3>
+            <p>Use AI tools and automation to simplify everyday workflows.</p>
+            <ul>
+              <li>AI tool integration</li>
+              <li>AI-powered website features</li>
+              <li>Prompt workflow setup</li>
+              <li>AI content assistance</li>
+            </ul>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon">◉</div>
+            <h3>Chatbots & Automation</h3>
+            <p>Helpful automated experiences for common customer tasks.</p>
+            <ul>
+              <li>Website chatbot setup</li>
+              <li>FAQ assistants</li>
+              <li>Lead capture workflows</li>
+              <li>Task automation planning</li>
+            </ul>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon">⌕</div>
+            <h3>SEO Services</h3>
+            <p>Improve website structure and help search engines understand your pages.</p>
+            <ul>
+              <li>On-page SEO</li>
+              <li>Keyword research</li>
+              <li>Meta titles & descriptions</li>
+              <li>Technical SEO basics</li>
+            </ul>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon">▤</div>
+            <h3>E-commerce Development</h3>
+            <p>Online shop experiences that make products easy to discover.</p>
+            <ul>
+              <li>Product pages</li>
+              <li>Shopping layouts</li>
+              <li>Store design</li>
+              <li>Checkout flow planning</li>
+            </ul>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon">✎</div>
+            <h3>UI/UX & Web Design</h3>
+            <p>Clear interfaces that look good and are easy to use.</p>
+            <ul>
+              <li>Website layouts</li>
+              <li>Wireframes</li>
+              <li>Responsive design</li>
+              <li>Design improvements</li>
+            </ul>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon">⚡</div>
+            <h3>Speed Optimization</h3>
+            <p>Improve page performance and create a smoother browsing experience.</p>
+            <ul>
+              <li>Image optimization</li>
+              <li>CSS & JavaScript cleanup</li>
+              <li>Performance review</li>
+              <li>Core Web Vitals guidance</li>
+            </ul>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon">⌁</div>
+            <h3>Website Maintenance</h3>
+            <p>Keep your website content and basic technical setup up to date.</p>
+            <ul>
+              <li>Content updates</li>
+              <li>Bug fixes</li>
+              <li>Page improvements</li>
+              <li>Backup guidance</li>
+            </ul>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon">⇄</div>
+            <h3>API & Third-party Integration</h3>
+            <p>Connect websites with useful external services and platforms.</p>
+            <ul>
+              <li>API integration</li>
+              <li>Form integrations</li>
+              <li>Maps & social embeds</li>
+              <li>Payment gateway planning</li>
+            </ul>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon">▧</div>
+            <h3>CMS & Blog Setup</h3>
+            <p>Manage content with a structured website or blog setup.</p>
+            <ul>
+              <li>Blog pages</li>
+              <li>Content organization</li>
+              <li>CMS setup guidance</li>
+              <li>Reusable page templates</li>
+            </ul>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon">☁</div>
+            <h3>Hosting & Deployment</h3>
+            <p>Publish your website and make it accessible online.</p>
+            <ul>
+              <li>GitHub Pages deployment</li>
+              <li>Netlify / Vercel setup</li>
+              <li>Domain connection guidance</li>
+              <li>Deployment troubleshooting</li>
+            </ul>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon">▥</div>
+            <h3>Analytics & Tracking</h3>
+            <p>Understand how visitors use your website.</p>
+            <ul>
+              <li>Analytics setup guidance</li>
+              <li>Traffic measurement</li>
+              <li>Event tracking planning</li>
+              <li>Basic reporting</li>
+            </ul>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon">◇</div>
+            <h3>Website Security Basics</h3>
+            <p>Apply sensible practices that help protect your website.</p>
+            <ul>
+              <li>HTTPS setup guidance</li>
+              <li>Form spam protection</li>
+              <li>Security checks</li>
+              <li>Update recommendations</li>
+            </ul>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon">▱</div>
+            <h3>Web Applications</h3>
+            <p>Interactive browser-based tools for specific needs.</p>
+            <ul>
+              <li>Dashboard interfaces</li>
+              <li>Calculators & utilities</li>
+              <li>Interactive forms</li>
+              <li>Custom front-end features</li>
+            </ul>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon">◎</div>
+            <h3>Social Media & Branding</h3>
+            <p>Consistent digital visuals and links for your online presence.</p>
+            <ul>
+              <li>Social profile integration</li>
+              <li>Basic brand styling</li>
+              <li>Website banners</li>
+              <li>Digital graphics direction</li>
+            </ul>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon">✉</div>
+            <h3>Contact Forms & Lead Capture</h3>
+            <p>Make it easy for customers to contact you from your website.</p>
+            <ul>
+              <li>Custom contact forms</li>
+              <li>Email form integration</li>
+              <li>Inquiry fields</li>
+              <li>Form layout and validation</li>
+            </ul>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon">＋</div>
+            <h3>IT Consultation</h3>
+            <p>Get help planning the right digital approach for your project.</p>
+            <ul>
+              <li>Website planning</li>
+              <li>Technology suggestions</li>
+              <li>Feature planning</li>
+              <li>Digital project guidance</li>
+            </ul>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY ME -->
+    <section class="section" id="why-us">
+      <div class="container">
+
+        <div class="section-head">
+          <div class="kicker">Why work with me</div>
+
+          <h2>
+            Simple process. <span class="gradient">Clear results.</span>
+          </h2>
+
+          <p>
+            My goal is to understand your idea and turn it into
+            a practical digital solution.
+          </p>
+        </div>
+
+        <div class="why-grid">
+
+          <div class="why-card">
+            <h3>01. Understand</h3>
+            <p>We discuss your goals, audience, required features and timeline.</p>
+          </div>
+
+          <div class="why-card">
+            <h3>02. Build</h3>
+            <p>I work on the structure, design and functionality for the agreed scope.</p>
+          </div>
+
+          <div class="why-card">
+            <h3>03. Improve</h3>
+            <p>We review the result and identify useful improvements before launch.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT PAGE / CONTACT FORM -->
+    <section class="section section-alt" id="contact">
+      <div class="container">
+
+        <div class="section-head">
+          <div class="kicker">Get in touch</div>
+
+          <h2>
+            Let's discuss your <span class="gradient">project.</span>
+          </h2>
+
+          <p>
+            Fill in the form with a few details. I'll have the information
+            needed to understand your project.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+
+          <aside class="contact-info">
+            <h3>Contact Salik</h3>
+
+            <p>
+              Have a website, app, AI or SEO project in mind?
+              Send a message using the form or connect through social media.
+            </p>
+
+            <a class="contact-link"
+               href="https://www.tiktok.com/@salikraju123"
+               target="_blank" rel="noopener">
+              TikTok ↗
+            </a>
+
+            <a class="contact-link"
+               href="https://www.facebook.com/profile.php?id=61584913797671"
+               target="_blank" rel="noopener">
+              Facebook ↗
+            </a>
+
+            <a class="contact-link"
+               href="https://www.instagram.com/saliktahir.pk/"
+               target="_blank" rel="noopener">
+              Instagram ↗
+            </a>
+          </aside>
+
+          <form class="contact-form"
+                action="https://formsubmit.co/YOUR_EMAIL@example.com"
+                method="POST">
+
+            <input type="hidden" name="_subject"
+                   value="New project inquiry from Salik Tahir website">
+
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_captcha" value="true">
+
+            <div class="form-grid">
+
+              <div class="field">
+                <label for="name">Your Name *</label>
+                <input id="name" name="Name" type="text"
+                       placeholder="Enter your name" required>
+              </div>
+
+              <div class="field">
+                <label for="email">Email Address *</label>
+                <input id="email" name="Email" type="email"
+                       placeholder="you@example.com" required>
+              </div>
+
+              <div class="field">
+                <label for="service">Service Required *</label>
+                <select id="service" name="Service" required>
+                  <option value="">Select a service</option>
+                  <option>Website Development</option>
+                  <option>Mobile App Development</option>
+                  <option>AI Solutions</option>
+                  <option>Chatbot & Automation</option>
+                  <option>SEO Services</option>
+                  <option>E-commerce Website</option>
+                  <option>UI/UX Design</option>
+                  <option>Website Maintenance</option>
+                  <option>Other IT Service</option>
+                </select>
+              </div>
+
+              <div class="field">
+                <label for="budget">Estimated Budget</label>
+                <select id="budget" name="Budget">
+                  <option value="">Choose budget (optional)</option>
+                  <option>Under $100</option>
+                  <option>$100–$300</option>
+                  <option>$300–$500</option>
+                  <option>$500+</option>
+                  <option>Let's discuss</option>
+                </select>
+              </div>
+
+              <div class="field full">
+                <label for="subject">Project Subject *</label>
+                <input id="subject" name="Project Subject"
+                       type="text"
+                       placeholder="What do you want to build?"
+                       required>
+              </div>
+
+              <div class="field full">
+                <label for="message">Project Details *</label>
+                <textarea id="message" name="Message"
+                          placeholder="Describe your project, features and goals..."
+                          required></textarea>
+              </div>
+
+            </div>
+
+            <button class="btn" type="submit">
+              Send Message ↗
+            </button>
+
+            <p class="form-hint">
+              Before publishing, replace YOUR_EMAIL@example.com in the
+              form action with your real email address. FormSubmit will
+              ask you to confirm the email the first time.
+            </p>
+
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+
+      <p>
+        © <span id="year"></span> Salik Tahir. All rights reserved.
+      </p>
+
+      <div class="socials">
+        <a href="https://www.tiktok.com/@salikraju123"
+           target="_blank" rel="noopener">TikTok</a>
+
+        <a href="https://www.facebook.com/profile.php?id=61584913797671"
+           target="_blank" rel="noopener">Facebook</a>
+
+        <a href="https://www.instagram.com/saliktahir.pk/"
+           target="_blank" rel="noopener">Instagram</a>
+      </div>
+
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+  </script>
 
 </body>
 </html>
-
