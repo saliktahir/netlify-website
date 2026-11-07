@@ -5,822 +5,176 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Salik AI | Web Developer & Digital Solutions</title>
-
-<meta name="description" content="Salik AI Web Developer - Professional Web Development, Mobile Development, Artificial Intelligence and SEO services.">
-<meta name="keywords" content="Salik AI, Salik Tahir, Web Developer, AI Developer, Scriptbaker, Mobile Development, SEO">
-<meta name="author" content="Salik Tahir">
-<meta name="robots" content="index, follow">
-<meta name="theme-color" content="#080D18">
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<title>Social Login Interface</title>
 
 <style>
-
-:root {
---bg:#080D18;
---card:#111B2B;
---soft:#101827;
---text:#F4F7FF;
---muted:#A3AEC0;
---accent:#00E5FF;
---purple:#8B5CF6;
---line:rgba(255,255,255,.10);
-}
-
 * {
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
-
-html {
-scroll-behavior:smooth;
-scroll-padding-top:90px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-background:var(--bg);
-color:var(--text);
-font-family:Inter,sans-serif;
-line-height:1.6;
-position:relative;
-isolation:isolate;
+    font-family: Arial, sans-serif;
+    background: #ffffff;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-body::before {
-content:"";
-position:fixed;
-inset:0;
-z-index:-1;
-pointer-events:none;
-background:
-linear-gradient(rgba(8,13,24,.88),rgba(8,13,24,.88)),
-url("Web%20Development%20Neon%20Code%20Banner.png");
-background-position:center;
-background-size:cover;
-background-repeat:no-repeat;
-opacity:1;
+.login-container {
+    width: 100%;
+    max-width: 550px;
+    padding: 35px 28px;
 }
 
-h1,h2,h3 {
-font-family:"Space Grotesk",sans-serif;
+h3 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 25px;
+    color: #111;
 }
 
-a {
-color:inherit;
-text-decoration:none;
+input {
+    width: 100%;
+    height: 61px;
+    border: 1px solid #ccd0d5;
+    border-radius: 17px;
+    padding: 0 16px;
+    font-size: 16px;
+    margin-bottom: 12px;
+    outline: none;
 }
 
-.wrap {
-width:90%;
-max-width:1150px;
-margin:auto;
+input:focus {
+    border-color: #0866ff;
 }
 
-/* NAVBAR */
-
-nav {
-position:sticky;
-top:0;
-z-index:100;
-background:rgba(8,13,24,.94);
-backdrop-filter:blur(15px);
-border-bottom:1px solid var(--line);
-}
-
-.navbar {
-min-height:75px;
-display:flex;
-justify-content:space-between;
-align-items:center;
-gap:20px;
-}
-
-.logo {
-font:700 25px "Space Grotesk";
-}
-
-.logo span {
-color:var(--accent);
-}
-
-.navlinks {
-display:flex;
-gap:25px;
-}
-
-.navlinks a {
-color:var(--muted);
-font-size:14px;
-transition:.3s;
-}
-
-.navlinks a:hover {
-color:var(--accent);
-}
-
-.nav-btn {
-background:var(--accent);
-color:#07111C;
-padding:11px 20px;
-border-radius:7px;
-font-weight:700;
-}
-
-/* HERO */
-
-.hero {
-padding:100px 0;
-text-align:center;
-}
-
-.profile {
-width:145px;
-height:145px;
-border-radius:50%;
-object-fit:cover;
-border:3px solid var(--accent);
-margin-bottom:25px;
-}
-
-.badge-text {
-color:var(--accent);
-font-size:13px;
-letter-spacing:3px;
-text-transform:uppercase;
-}
-
-.hero h1 {
-font-size:clamp(38px,7vw,68px);
-line-height:1.12;
-margin:20px 0;
-}
-
-.gradient {
-background:linear-gradient(90deg,#00E5FF,#8B5CF6);
-background-clip:text;
--webkit-background-clip:text;
-color:transparent;
-}
-
-.hero p {
-color:var(--muted);
-max-width:650px;
-margin:0 auto 30px;
-}
-
-.btn {
-display:inline-block;
-padding:13px 23px;
-border-radius:8px;
-margin:5px;
-font-weight:700;
-transition:.3s;
-}
-
-.btn-primary {
-background:var(--accent);
-color:#07111C;
-}
-
-.btn-outline {
-border:1px solid var(--accent);
-color:var(--accent);
-}
-
-.btn:hover {
-transform:translateY(-4px);
-}
-
-/* SCRIPTBAKER */
-
-.script-section {
-padding:75px 0;
-background:rgba(16,24,39,.85);
-border-block:1px solid var(--line);
-}
-
-.script-grid {
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:45px;
-align-items:center;
-}
-
-.script-logo {
-font-size:35px;
-font-weight:700;
-font-family:"Space Grotesk";
-margin-bottom:15px;
-}
-
-.script-logo span {
-color:var(--accent);
-}
-
-.script-section p {
-color:var(--muted);
-margin:18px 0;
-}
-
-.script-banner {
-width:100%;
-border-radius:15px;
-border:1px solid var(--line);
-display:block;
-}
-
-/* SECTION HEAD */
-
-section {
-padding:80px 0;
-}
-
-.section-head {
-text-align:center;
-margin-bottom:45px;
-}
-
-.section-head h2 {
-font-size:36px;
-margin-bottom:10px;
-}
-
-.section-head p {
-color:var(--muted);
-}
-
-/* SERVICES */
-
-.services-grid {
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:22px;
-}
-
-.service-card {
-background:rgba(17,27,43,.92);
-padding:30px;
-border:1px solid var(--line);
-border-radius:14px;
-transition:.3s;
-}
-
-.service-card:hover {
-transform:translateY(-7px);
-border-color:var(--accent);
-box-shadow:0 10px 35px rgba(0,229,255,.10);
-}
-
-.service-icon {
-font-size:38px;
-margin-bottom:17px;
-}
-
-.service-card h3 {
-font-size:21px;
-margin-bottom:12px;
-}
-
-.service-card p {
-font-size:14px;
-color:var(--muted);
-}
-
-.service-tag {
-display:inline-block;
-margin-top:18px;
-color:var(--accent);
-border:1px solid rgba(0,229,255,.3);
-padding:5px 12px;
-border-radius:20px;
-font-size:12px;
-}
-
-/* ABOUT */
-
-.about-box {
-background:rgba(17,27,43,.90);
-padding:40px;
-border:1px solid var(--line);
-border-radius:15px;
-text-align:center;
-}
-
-.about-box p {
-max-width:750px;
-margin:15px auto;
-color:var(--muted);
-}
-
-/* PRICING */
-
-.pricing-grid {
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:22px;
-}
-
-.price-card {
-background:rgba(17,27,43,.92);
-padding:30px;
-border:1px solid var(--line);
-border-radius:14px;
-}
-
-.price {
-color:var(--accent);
-font-size:29px;
-font-weight:700;
-margin:20px 0;
-}
-
-.price-card p {
-color:var(--muted);
-font-size:14px;
-}
-
-/* STATS */
-
-.stats {
-padding:40px 0;
-background:rgba(16,24,39,.92);
-border-block:1px solid var(--line);
-}
-
-.stats-grid {
-display:grid;
-grid-template-columns:repeat(3,1fr);
-text-align:center;
-gap:20px;
-}
-
-.stats-grid h3 {
-font-size:35px;
-color:var(--accent);
-}
-
-.stats-grid p {
-color:var(--muted);
-font-size:14px;
-}
-
-/* CONTACT */
-
-.contact-box {
-text-align:center;
-padding:55px 25px;
-background:rgba(17,27,43,.93);
-border:1px solid var(--line);
-border-radius:16px;
-}
-
-.contact-box p {
-color:var(--muted);
-margin:15px 0;
-}
-
-/* FOOTER */
-
-footer {
-padding:35px 0;
-border-top:1px solid var(--line);
-background:rgba(8,13,24,.95);
-}
-
-.footer-content {
-display:flex;
-justify-content:space-between;
-align-items:center;
-flex-wrap:wrap;
-gap:20px;
-}
-
-.socials {
-display:flex;
-gap:12px;
-flex-wrap:wrap;
-}
-
-.socials a {
-border:1px solid var(--line);
-padding:9px 14px;
-border-radius:7px;
-font-size:13px;
-}
-
-.socials a:hover {
-color:var(--accent);
-border-color:var(--accent);
-}
-
-footer small {
-color:var(--muted);
-}
-
-/* MOBILE */
-
-@media(max-width:800px) {
-
-.services-grid,.pricing-grid {
-grid-template-columns:repeat(2,1fr);
-}
-
-.script-grid {
-grid-template-columns:1fr;
-}
-
-.navlinks {
-gap:12px;
+.login-btn {
+    width: 100%;
+    height: 44px;
+    background: #0866e8;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 11px;
+    cursor: pointer;
 }
 
-.navlinks a {
-font-size:12px;
+.forgot {
+    display: block;
+    text-align: center;
+    margin-top: 24px;
+    color: #111;
+    text-decoration: none;
+    font-size: 16px;
 }
 
-.nav-btn {
-display:none;
+.divider {
+    height: 55px;
 }
 
+.create-btn {
+    width: 100%;
+    height: 45px;
+    background: white;
+    border: 1px solid #0866ff;
+    color: #0866ff;
+    border-radius: 30px;
+    font-size: 16px;
+    cursor: pointer;
 }
 
-@media(max-width:580px) {
-
-.navbar {
-flex-wrap:wrap;
-padding:15px 0;
-}
-
-.navlinks {
-width:100%;
-justify-content:space-between;
-}
-
-.services-grid,.pricing-grid {
-grid-template-columns:1fr;
-}
-
-.hero {
-padding:65px 0;
-}
-
-.hero h1 {
-font-size:39px;
+button:hover {
+    opacity: 0.9;
 }
 
-.profile {
-width:120px;
-height:120px;
+.message {
+    text-align: center;
+    color: #333;
+    font-size: 14px;
+    margin-top: 20px;
 }
 
-.stats-grid {
-grid-template-columns:1fr;
+@media(max-width: 600px) {
+    .login-container {
+        padding: 25px 20px;
+    }
 }
-
-.about-box {
-padding:25px;
-}
-
-.footer-content {
-flex-direction:column;
-text-align:center;
-}
-
-body::before {
-background-size:auto 100%;
-}
-
-}
-
 </style>
 </head>
 
 <body>
 
-<!-- NAVIGATION -->
+<div class="login-container">
 
-<nav>
-<div class="wrap navbar">
+    <h3>Log into Social App Demo</h3>
 
-<a href="index.html" class="logo">
-SALIK<span>AI.</span>
-</a>
+    <form id="loginForm">
 
-<div class="navlinks">
-<a href="#home">Home</a>
-<a href="#about">About</a>
-<a href="#services">Services</a>
-<a href="#pricing">Pricing</a>
-<a href="contact.html">Contact</a>
-</div>
+        <input
+            type="text"
+            placeholder="Email or mobile number"
+            required
+        >
 
-<a href="contact.html" class="nav-btn">Hire Me</a>
+        <input
+            type="password"
+            placeholder="Password"
+            required
+        >
 
-</div>
-</nav>
+        <button class="login-btn" type="submit">
+            Log in
+        </button>
 
-<!-- HERO -->
+    </form>
 
-<header class="hero" id="home">
-<div class="wrap">
+    <a href="#" class="forgot" id="forgot">
+        Forgot password?
+    </a>
 
-<img
-src="WhatsApp Image 2026-10-26 at 8.58.28 PM.jpeg"
-alt="Salik Tahir"
-class="profile"
->
+    <div class="divider"></div>
 
-<div class="badge-text">
-AI & WEB DEVELOPER
-</div>
+    <button class="create-btn" id="create">
+        Create new account
+    </button>
 
-<h1>
-Hi, I'm <span class="gradient">Salik Tahir</span>
-<br>
-Building the Digital Future
-</h1>
-
-<p>
-I am Salik Tahir, a Web Developer and technology enthusiast.
-I create modern websites, explore Artificial Intelligence,
-build digital experiences and work with SEO.
-</p>
-
-<a href="#services" class="btn btn-primary">
-Explore Services
-</a>
-
-<a href="contact.html" class="btn btn-outline">
-Contact Me
-</a>
-
-</div>
-</header>
-
-<!-- SCRIPTBAKER -->
-
-<section class="script-section">
-<div class="wrap script-grid">
-
-<div>
-
-<div class="script-logo">
-SCRIPT<span>BAKER</span>
-</div>
-
-<div class="badge-text">
-Digital Technology Solutions
-</div>
-
-<h2>We Build, Scale & Support Your Tech</h2>
-
-<p>
-Scriptbaker focuses on Web Development, Mobile Development,
-Artificial Intelligence and SEO solutions.
-We help turn digital ideas into reality.
-</p>
-
-<a href="#services" class="btn btn-primary">
-Discover Scriptbaker
-</a>
+    <p class="message" id="message">
+        Demo interface — no credentials are collected.
+    </p>
 
 </div>
 
-<div>
-<img
-src="scriptbaker-office.png"
-alt="Scriptbaker Web Mobile AI SEO"
-class="script-banner"
-loading="lazy"
->
-</div>
+<script>
+const form = document.getElementById("loginForm");
+const message = document.getElementById("message");
 
-</div>
-</section>
+form.addEventListener("submit", function(e) {
+    e.preventDefault();
 
-<!-- ABOUT -->
+    message.textContent =
+    "Demo only: Login functionality is not connected.";
+    
+    form.reset();
+});
 
-<section id="about">
-<div class="wrap">
+document.getElementById("forgot").addEventListener("click",
+function(e) {
+    e.preventDefault();
+    message.textContent =
+    "Password recovery is not available in this demo.";
+});
 
-<div class="section-head">
-<h2>About Me</h2>
-<p>Meet the person behind Salik AI.</p>
-</div>
-
-<div class="about-box">
-
-<h2>Salik Tahir</h2>
-
-<p>
-I enjoy web development, coding, AI technology,
-playing games and discovering new ideas.
-My goal is to keep learning and create useful
-digital experiences.
-</p>
-
-<a href="contact.html" class="btn btn-outline">
-Let's Connect
-</a>
-
-</div>
-</div>
-</section>
-
-<!-- SERVICES -->
-
-<section id="services">
-<div class="wrap">
-
-<div class="section-head">
-<h2>My Services</h2>
-<p>Technology solutions for a digital world.</p>
-</div>
-
-<div class="services-grid">
-
-<article class="service-card">
-<div class="service-icon">💻</div>
-<h3>Web Development</h3>
-<p>
-Professional, modern and responsive websites
-using modern web technologies.
-</p>
-<span class="service-tag">WEB DEVELOPMENT</span>
-</article>
-
-<article class="service-card">
-<div class="service-icon">📱</div>
-<h3>Mobile Development</h3>
-<p>
-Mobile-friendly websites and modern
-mobile digital experiences.
-</p>
-<span class="service-tag">MOBILE</span>
-</article>
-
-<article class="service-card">
-<div class="service-icon">🤖</div>
-<h3>Artificial Intelligence</h3>
-<p>
-Explore AI tools and intelligent
-technology-powered solutions.
-</p>
-<span class="service-tag">AI TECHNOLOGY</span>
-</article>
-
-<article class="service-card">
-<div class="service-icon">🚀</div>
-<h3>SEO Optimization</h3>
-<p>
-Improve website structure, search visibility,
-metadata and SEO performance.
-</p>
-<span class="service-tag">SEO</span>
-</article>
-
-<article class="service-card">
-<div class="service-icon">🎨</div>
-<h3>Web Design</h3>
-<p>
-Beautiful layouts, modern user interfaces
-and creative website experiences.
-</p>
-<span class="service-tag">DESIGN</span>
-</article>
-
-<article class="service-card">
-<div class="service-icon">⚙️</div>
-<h3>Digital Solutions</h3>
-<p>
-Creative digital ideas and technology
-solutions for different needs.
-</p>
-<span class="service-tag">TECHNOLOGY</span>
-</article>
-
-</div>
-</div>
-</section>
-
-<!-- PRICING -->
-
-<section id="pricing">
-<div class="wrap">
-
-<div class="section-head">
-<h2>Website Packages</h2>
-<p>Choose a package for your project.</p>
-</div>
-
-<div class="pricing-grid">
-
-<article class="price-card">
-<h3>Starter</h3>
-<div class="price">Rs. 15,000</div>
-<p>One-page professional website with responsive design.</p>
-<a href="contact.html" class="btn btn-outline">Get Started</a>
-</article>
-
-<article class="price-card">
-<h3>Business</h3>
-<div class="price">Rs. 30,000</div>
-<p>Multi-page business website with services and contact.</p>
-<a href="contact.html" class="btn btn-primary">Get Started</a>
-</article>
-
-<article class="price-card">
-<h3>Custom</h3>
-<div class="price">Let's Talk</div>
-<p>Custom website based on your project requirements.</p>
-<a href="contact.html" class="btn btn-outline">Contact Me</a>
-</article>
-
-</div>
-</div>
-</section>
-
-<!-- STATS -->
-
-<div class="stats">
-<div class="wrap stats-grid">
-
-<div>
-<h3>WEB</h3>
-<p>Development</p>
-</div>
-
-<div>
-<h3>AI</h3>
-<p>Artificial Intelligence</p>
-</div>
-
-<div>
-<h3>SEO</h3>
-<p>Search Optimization</p>
-</div>
-
-</div>
-</div>
-
-<!-- CONTACT -->
-
-<section>
-<div class="wrap">
-
-<div class="contact-box">
-
-<h2>Let's Build Something Amazing!</h2>
-
-<p>
-Have a website project or digital idea?
-Let's work together.
-</p>
-
-<a href="contact.html" class="btn btn-primary">
-Contact Salik
-</a>
-
-</div>
-
-</div>
-</section>
-
-<!-- FOOTER -->
-
-<footer>
-<div class="wrap footer-content">
-
-<a href="index.html" class="logo">
-SALIK<span>AI.</span>
-</a>
-
-<div class="socials">
-
-<a href="https://www.tiktok.com/@salikraju123"
-target="_blank" rel="noopener noreferrer">
-TikTok
-</a>
-
-<a href="https://www.facebook.com/profile.php?id=61584913797671"
-target="_blank" rel="noopener noreferrer">
-Facebook
-</a>
-
-<a href="https://www.instagram.com/saliktahir.pk/"
-target="_blank" rel="noopener noreferrer">
-Instagram
-</a>
-
-</div>
-
-<small>© 2026 Salik Tahir. All Rights Reserved.</small>
-
-</div>
-</footer>
+document.getElementById("create").addEventListener("click",
+function() {
+    message.textContent =
+    "Account creation is not connected in this demo.";
+});
+</script>
 
 </body>
 </html>
